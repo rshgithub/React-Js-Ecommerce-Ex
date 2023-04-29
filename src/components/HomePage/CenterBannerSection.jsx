@@ -27,9 +27,11 @@ const CenterBannerSection = () => {
             alignItems: "center",
           }}
         >
+          
           <Image
-            src="../../../public/assets/iphone.png"
-            height="600px"
+            preview={false}
+            src="https://priceanywhere.com/wp-content/uploads/iPhone-6s-Plus-Price-in-Nigeria.png"
+            height="500px"
             width="600px"
           />
         </Col>

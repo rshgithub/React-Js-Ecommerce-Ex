@@ -1,6 +1,6 @@
 .button-overlay {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   padding-left: 35%;
   padding-right: 35%;
@@ -11,6 +11,7 @@
   background-color: rgba(128, 128, 128, 0.3);
   z-index: 1;
 }
+ 
 
 .shop-now-button {
   color: white;
@@ -21,4 +22,7 @@
   background-color: #2E90E5;
 }
 
- 
+.shop-now-button:hover {
+  background-color: white;
+  color: black;
+}
