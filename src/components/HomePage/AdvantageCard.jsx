@@ -44,7 +44,7 @@ const AdvantageCard = () => {
         dataSource={data}
         renderItem={(item) => (
           <List.Item>
-            <Card bordered={false}>
+            <Card  style={{ border: 'none' }} >
               <div style={{ display: "flex" }}>
                 <div >
                 {item.icon}

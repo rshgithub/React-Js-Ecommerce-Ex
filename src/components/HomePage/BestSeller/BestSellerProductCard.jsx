@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { List, Card, Button, Space, Badge, Typography, Rate } from "antd";
+import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { useState } from "react";
 import "../HomePage.css";
-import { List, Space, Button, Badge, Typography, Rate, Card } from "antd";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"; 
 
 const data = [
   {
@@ -32,7 +32,7 @@ const data = [
     rating: 4,
   },
   {
-    key:4,
+    key: 4,
     title: "Title 4",
     image: "https://cdn.ttgtmedia.com/rms/onlineimages/hp_elitebook_mobile.jpg",
     lastPrice: "55",
@@ -79,84 +79,110 @@ const data = [
 ];
 
 const BestSellerProductCard = () => {
-  const [isRecent, setRecent] = useState(true);
-  const [showButtons, setShowButtons] = useState(false);
+  const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
 
-  const [isPreviewVisible, setPreviewVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const handleCardMouseEnter = (index) => {
+    setHoveredCardIndex(index);
+  };
+
+  const handleCardMouseLeave = () => {
+    setHoveredCardIndex(null);
+  };
 
   return (
-    <div>
-      <List
-       grid={{ gutter: 10, column: 4 }}
-        dataSource={data}
-        renderItem={(item) => (
-          <List.Item >
-            <Card
-            key={item.key}
-              hoverable
-              style={{ width: 310, padding: 5 }}
-              cover={
-                <Badge.Ribbon 
-                hidden={item.ifNew ? false : true}
-                  placement="start"
-                  text="HOT"
-                  color="red"
-                >
-                  <div 
-                    onMouseEnter={() => setShowButtons(true)}
-                    onMouseLeave={() => setShowButtons(false)}
-                  >
+    <List
+      grid={{ gutter: 10, column: 4 }}
+      dataSource={data}
+      renderItem={(item, index) => (
+        <List.Item
+          onMouseEnter={() => handleCardMouseEnter(index)}
+          onMouseLeave={() => handleCardMouseLeave()}
+ 
+        >
+          <Card
+            hoverable
+            style={{ width: 310, padding: 5 }}
+            cover={
+              item.ifNew ? (
+                <Badge.Ribbon placement="start" text="HOT" color="red">
+                  <div>
                     {/* <Badge  style={{ position: 'absolute', right: 280, top: 20 }} count={isRecent ? "HOT" : ""}  color="red"className="soppingCartIcon"> */}
                     <img
                       style={{ height: 300, width: 300 }}
                       alt="example"
                       src={item.image}
                     />
-                    {showButtons && (
-                      <div className="button-overlay">
-                        <Space size="middle">
-                          <Button
-                            ghost
-                            type="primary"
-                            size="large"
-                            shape="circle"
-                            icon={<HeartOutlined />}
-                            style={{ backgroundColor: "#ccc" }}
-                          ></Button>
-                          <Button
-                            ghost
-                            type="primary"
-                            size="large"
-                            shape="circle"
-                            icon={<ShoppingCartOutlined />}
-                            style={{ backgroundColor: "#ccc" }}
-                          ></Button>
-                        </Space>
-                      </div>
-                    )}
+
                     {/* </Badge> */}
                   </div>
                 </Badge.Ribbon>
+              ) : (
+                <Badge.Ribbon placement="start" color="transparent">
+                  <div>
+                    {/* <Badge  style={{ position: 'absolute', right: 280, top: 20 }} count={isRecent ? "HOT" : ""}  color="red"className="soppingCartIcon"> */}
+                    <img
+                      style={{ height: 300, width: 300 }}
+                      alt="example"
+                      src={item.image}
+                    />
+
+                    {/* </Badge> */}
+                  </div>
+                </Badge.Ribbon>
+              )
+            }
+          >
+            <Card.Meta
+              title={item.title}
+              description={
+                <Typography.Paragraph style={{ fontSize: "18px" }}>
+                  {"$ "}
+                  {item.lastPrice}{" "}
+                  <Typography.Text
+                    delete
+                    type="danger"
+                    style={{ fontSize: "18px" }}
+                  >
+                    {"$ "}
+                    {item.originalPrice}
+                  </Typography.Text>
+                </Typography.Paragraph>
               }
-            >
-              <Card.Meta
-                title={item.title}
-                description={
-                  <Typography.Paragraph style={{ fontSize: '18px' }}>
-                    {"$ "}{item.lastPrice}{" "}
-                    <Typography.Text delete type="danger" style={{ fontSize: '18px' }}>
-                    {"$ "}{item.originalPrice}
-                    </Typography.Text>
-                  </Typography.Paragraph>
-                }
-              ></Card.Meta>
-              <Rate allowClear={false} allowHalf disabled value={item.rating} />
-            </Card>
-          </List.Item>
-        )}
-      />
-    </div>
+            ></Card.Meta>
+            <Rate
+              style={{ fontSize: 16 }}
+              allowClear={false}
+              allowHalf
+              disabled
+              value={item.rating}
+            />
+
+            {hoveredCardIndex === index && (
+              <div className="button-overlay">
+                <Space size="middle">
+                  <Button
+                    ghost
+                    type="primary"
+                    size="large"
+                    shape="circle"
+                    icon={<HeartOutlined />}
+                    style={{ backgroundColor: "#ccc" }}
+                  ></Button>
+                  <Button
+                    ghost
+                    type="primary"
+                    size="large"
+                    shape="circle"
+                    icon={<ShoppingCartOutlined />}
+                    style={{ backgroundColor: "#ccc" }}
+                  ></Button>
+                </Space>
+              </div>
+            )}
+          </Card>
+        </List.Item>
+      )}
+    />
   );
 };
 

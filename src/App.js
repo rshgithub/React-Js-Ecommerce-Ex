@@ -14,18 +14,25 @@ import {
   Navbar,
   PageBotton,
 } from "./components/HomePage";
-import { BrowserRouter } from 'react-router-dom';
+import {
+  NewsletterCard
+} from "./components/NewsLetter";
+
+
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-          <BrowserRouter> 
-          <BestSellerSection />
-          </BrowserRouter>
-          <CenterBannerSection/>
-          <AdvantageCard/>
+      <BrowserRouter>
+        <BestSellerSection />
+      </BrowserRouter>
+      <CenterBannerSection />
+      <AdvantageCard />
+      <LatestNewsCard />
+      <FeaturedProductCard/>
+      <SearchBar />
 
-          <SearchBar/>
 
     </div>
   );
