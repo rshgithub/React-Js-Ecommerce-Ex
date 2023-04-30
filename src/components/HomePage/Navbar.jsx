@@ -1,6 +1,6 @@
 import { Menu, Space } from 'antd';
 import { useState } from 'react';
-import './NavBar.scss';
+import '../../Styles/NavBar.scss';
 import { Container, Row, Col } from "reactstrap";
 
 const NavBar = () => {

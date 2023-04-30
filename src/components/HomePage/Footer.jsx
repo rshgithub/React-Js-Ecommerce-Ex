@@ -3,11 +3,10 @@ import Payment from "../../assets/payments.png";
 import { Col, Divider,Image, Row} from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { Space } from 'antd';
-import '../Footer/Footer.scss'
+import '../../../src/Styles/Footer.scss'
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
 });
-
     
     const Footer = () => {
       return (

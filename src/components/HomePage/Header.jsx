@@ -1,11 +1,9 @@
 import React from 'react';
 import '../../App.scss'
-import { CaretDownFilled, SearchOutlined} from '@ant-design/icons';
-import { Breadcrumb, Col, Divider, Dropdown, Image, Row , Space} from 'antd';
+import { CaretDownFilled, SearchOutlined, ShoppingOutlined, UserOutlined} from '@ant-design/icons';
+import { Breadcrumb, Col, Divider, Dropdown, Row , Space} from 'antd';
 import { Container } from "reactstrap";
 import BreadcrumbSeparator from 'antd/es/breadcrumb/BreadcrumbSeparator';
-import MyProfile from '../../assets/profile_close_2.png';
-import Bag from '../../assets/bag_3.png';
 
 const AppHeader = () => (
   <Container>
@@ -27,11 +25,11 @@ const AppHeader = () => (
       <Col span={12}>
       <Breadcrumb>
     <BreadcrumbSeparator>
-    <Image src={MyProfile} />
+    <UserOutlined /> 
     <span>My profile</span>
     </BreadcrumbSeparator>
     <BreadcrumbSeparator>
-    <Image src={Bag} />
+    <ShoppingOutlined />
       <span>0 Items</span>
     </BreadcrumbSeparator>
     <BreadcrumbSeparator>
