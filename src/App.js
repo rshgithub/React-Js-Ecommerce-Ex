@@ -1,34 +1,33 @@
 import "./App.scss";
 import {
-  AdvantageCard,
-  BestSellerSection,
-  CenterBannerSection,
-  ContactUs,
-  FeaturedProductCard,
-  Footer,
-  Header,
-  HeaderBannerImages,
-  ImageSlider,
-  SearchBar,
-  LatestNewsCard,
-  Navbar,
-  PageBotton,
-} from "./components/HomePage";
+AdvantageCard,
+BestSellerSection,
+CenterBannerSection,
+Header,
+ImageSlider,
+SearchBar,
+Navbar,
+} from "./components/HomePage/index";
+import Footer from './components/HomePage/Footer' 
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-          <BrowserRouter> 
-          <BestSellerSection />
-          </BrowserRouter>
-          <CenterBannerSection/>
-          <AdvantageCard/>
+return (
+  <div className="App">
+<Header/>
+    <Navbar/>
+    <ImageSlider/>
+        <BrowserRouter> 
+        <BestSellerSection />
+        </BrowserRouter>
+        <CenterBannerSection/>
+        <AdvantageCard/>
+        <SearchBar/>
+        
+        <Footer/>
 
-          <SearchBar/>
-
-    </div>
-  );
+  </div>
+);
 }
 
 export default App;

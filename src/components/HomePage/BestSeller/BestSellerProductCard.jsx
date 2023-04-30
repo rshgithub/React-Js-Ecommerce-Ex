@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../HomePage.css";
+import "../../HomePage.css";
 import { List, Space, Button, Badge, Typography, Rate, Card } from "antd";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"; 
 

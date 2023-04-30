@@ -1,6 +1,7 @@
 import React from "react";
 import { Button,  Image, Row, Col } from "antd";
-import "./HomePage.css";
+import "../HomePage.css";
+import Iphone from '../../assets/pic.png'
 
 const CenterBannerSection = () => {
   return (
@@ -28,9 +29,10 @@ const CenterBannerSection = () => {
           }}
         >
           <Image
-            src="../../../public/assets/iphone.png"
-            height="600px"
-            width="600px"
+            src={Iphone}
+            height="500px"
+            width="500px"
+            preview={false}
           />
         </Col>
       </Row>
