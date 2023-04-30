@@ -1,6 +1,6 @@
 import React from "react";
 import { Button,  Image, Row, Col } from "antd";
-import "./HomePage.css";
+import "../../App.css";
 
 const CenterBannerSection = () => {
   return (

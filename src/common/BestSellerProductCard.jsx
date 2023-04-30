@@ -1,7 +1,7 @@
 import { List, Card, Button, Space, Badge, Typography, Rate } from "antd";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import "../HomePage.css";
+import "../App.css";
 
 const data = [
   {
