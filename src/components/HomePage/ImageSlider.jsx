@@ -1,14 +1,18 @@
-import React from "react";
-import { Carousel,Row,Col,Button,Image} from 'antd';
-import Banner from '../../assets/Banners.png'
+import React, {  useState } from "react";
+import { Carousel,Row,Col,Image} from 'antd';
 import Iphone from '../../assets/MaskGroup1.png'
 import "../HomePage.css";
-import {  ArrowRightOutlined, LeftSquareOutlined } from "@ant-design/icons";
 
-const ImageSlider = () => {
+const ImageSlider = (props) => {
+  const [dotPosition, setDotPosition] = useState('bottom');
+  const handlePositionChange = ({ target: { value } }) => {
+    setDotPosition(value);
+  };
   return (
-    <>
-    <Row style={{backgroundImage: "linear-gradient(to right, rgba(255,0,0), rgba(213,83,151),rgba(153,98,240))",}}>
+   <>
+      <Carousel dotPosition={dotPosition} autoplay
+     style={{backgroundImage: "linear-gradient(to right, rgba(255,0,0), rgba(213,83,151),rgba(153,98,240))",}}>
+      <Row>
         <Col
           span={12}
           style={{
@@ -25,37 +29,45 @@ const ImageSlider = () => {
             </p> 
           <a href="#" style=
           {{color: 'white' ,fontWeight:"bold"}}>MORE</a>
-        </Col>
-        <Col
-          span={12}
+          <Image
           style={{
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Image
+            justifyContent: "left",
+            alignItems: "left",}}
             src={Iphone}
-            height="500px"
-            width="500px"
-            preview={false}
-          />
+            height="400px"
+            width="400px"
+            preview={false}/>
         </Col>
-        <Col>
-        <Image src={Banner} style={{
+      
+            {/* <Col span={6}>
+        <Image
+          style={{
+            display: "flex",
+            justifyContent: "right",
+            alignItems: "right",}}
+            src={Iphone}
+            height="400px"
+            width="400px"
+            preview={false}/>
+            </Col> */}
+        {/*<Image src={Banner} style={{
           position: "absolute",
            alignItems: "center",
            justifyContent: "center",
            flexWrap: "wrap"
         }} 
-        preview={false}/>
-        </Col>
+      preview={false}/>*/}
+
       </Row>
+      </Carousel>
 
 
-    
-  </>
+        
+      </>
   );
         }
+
+      
         
  export default ImageSlider;

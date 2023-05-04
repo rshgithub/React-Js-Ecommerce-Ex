@@ -19,8 +19,8 @@ return (
 <Row align="center">
 <Col span={6} offset={6}>
 <div className="logo">
-          <h1>BOUNCER</h1>
-        </div>
+<h1>BOUNCER</h1>
+      </div>
 </Col>
 </Row>
 <Row align="center">
@@ -85,26 +85,26 @@ type: 'group',
 label: 'Category',
 key:'category',
 children: [
-  {
-    label: 'AirPort & Wireless',
-    key: 'air',
+{
+  label: 'AirPort & Wireless',
+  key: 'air',
+},
+{
+  label: 'AppleCare',
+  key: 'applecare',
+},
+{
+    label: 'Bags, Shells & Sleeves',
+    key: 'bags',
   },
   {
-    label: 'AppleCare',
-    key: 'applecare',
+    label: 'Business & Security',
+    key: 'business',
   },
   {
-      label: 'Bags, Shells & Sleeves',
-      key: 'bags',
-    },
-    {
-      label: 'Business & Security',
-      key: 'business',
-    },
-    {
-      label: 'Cables & Docks',
-      key: 'cables',
-    },
+    label: 'Cables & Docks',
+    key: 'cables',
+  },
 ],
 }
 ]}
@@ -120,18 +120,18 @@ type: 'group',
 label: '',
 key:'',
 children: [
-  {
-    label: ' Cameras & Video',
-    key: 'Cameras',
-  },
-  {
-    label: 'Car & Travel',
-    key: 'Car',
-  },
-  {
-      label: 'Cases & Films',
-      key: 'Cases',
-    }
+{
+  label: ' Cameras & Video',
+  key: 'Cameras',
+},
+{
+  label: 'Car & Travel',
+  key: 'Car',
+},
+{
+    label: 'Cases & Films',
+    key: 'Cases',
+  }
 ],
 }
 ]}
@@ -146,26 +146,26 @@ type: 'group',
 label: 'Category',
 key:'category',
 children: [
-  {
-    label: 'Charging Devices',
-    key: 'Charging',
+{
+  label: 'Charging Devices',
+  key: 'Charging',
+},
+{
+  label: 'Connected Home',
+  key: 'Connected',
+},
+{
+    label: 'Device Care',
+    key: 'Device',
   },
   {
-    label: 'Connected Home',
-    key: 'Connected',
+    label: 'Display & Graphic',
+    key: 'Display',
   },
   {
-      label: 'Device Care',
-      key: 'Device',
-    },
-    {
-      label: 'Display & Graphic',
-      key: 'Display',
-    },
-    {
-      label: 'Fitness & Sport',
-      key: 'Fitness',
-    },
+    label: 'Fitness & Sport',
+    key: 'Fitness',
+  },
 ],
 }
 ]}
@@ -181,14 +181,14 @@ type: 'group',
 label: '',
 key:'',
 children: [
-  {
-    label: 'Headphones',
-    key: 'Headphones',
-  },
-  {
-    label: 'HealhKit',
-    key: 'HealhKit',
-  }
+{
+  label: 'Headphones',
+  key: 'Headphones',
+},
+{
+  label: 'HealhKit',
+  key: 'HealhKit',
+}
 ],
 }
 ]}
@@ -204,18 +204,18 @@ type: 'group',
 label: 'Category',
 key:'category',
 children: [
-  {
-    label: 'Mice & Keyboards',
-    key: 'Mice',
-  },
-  {
-    label: 'Music Creation',
-    key: 'Music',
-  },
-  {
-      label: 'Networking & Server',
-      key: 'Networking',
-    }
+{
+  label: 'Mice & Keyboards',
+  key: 'Mice',
+},
+{
+  label: 'Music Creation',
+  key: 'Music',
+},
+{
+    label: 'Networking & Server',
+    key: 'Networking',
+  }
 ],
 }
 ]}

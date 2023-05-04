@@ -28,6 +28,15 @@
 }
 }
 
+//NavBar
+.logo h1 {
+    line-height: 1.5rem;
+    color: rgba(250, 2, 2, 0.8);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    }
+
 //Footer
 .footer {
 width: 100%;
@@ -38,15 +47,15 @@ width: 100%;
     display: flex;
     flex-flow: wrap;
     gap: 20px;
-    @include md {
+
         justify-content: space-between;
         padding: 50px 0;
     }
     .col {
         max-width: 300px;
-        &:nth-child(3) {
+        
             width: 150px;
-            @include md {
+          
                 width: auto;
             }
         }
@@ -76,8 +85,7 @@ width: 100%;
                 cursor: pointer;
             }
         }
-    }
-}
+    
 .bottom-bar {
     .bottom-bar-content {
         padding: 20px;
@@ -103,14 +111,5 @@ width: 100%;
         }
     }
 }
-}
 
-//NavBar
-.logo h1 {
-line-height: 1.5rem;
-color: rgba(250, 2, 2, 0.8);
-text-decoration: none;
-font-weight: 700;
-font-size: 1.5rem;
-}
 
