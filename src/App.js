@@ -1,4 +1,3 @@
-// import "./App.scss";
 import {
   AdvantageCard,
   BestSellerSection,
@@ -9,10 +8,9 @@ import {
   LatestNewsCard,
   PageBotton,
 } from "./components/HomePage";
-import { NewsletterCard } from "./components/NewsLetter";
 
 import { BrowserRouter } from "react-router-dom";
-import { HomePage, ProductDetails } from "./pages";
+import {  ProductDetails } from "./pages";
 import { Footer, Header, Navbar } from "../src/common";
 
 function App() {

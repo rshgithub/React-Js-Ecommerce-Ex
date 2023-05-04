@@ -5,11 +5,8 @@ import "../App.css";
 
 
 
-const BestSellerProductCard  = (props) => { 
-  const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
-
-  const {index} = props.index ;
-  const {obj} = props.obj ; 
+const BestSellerProductCard  = ({index , obj }) => { 
+  const [hoveredCardIndex, setHoveredCardIndex] = useState(null); 
 
   const handleCardMouseEnter = (index) => {
     setHoveredCardIndex(index);
@@ -30,14 +27,14 @@ const BestSellerProductCard  = (props) => {
             hoverable
             style={{ width: 310, padding: 5 }}
             cover={
-              props.obj.ifNew ? (
+              obj.ifNew ? (
                 <Badge.Ribbon placement="start" text="HOT" color="red">
                   <div>
                     {/* <Badge  style={{ position: 'absolute', right: 280, top: 20 }} count={isRecent ? "HOT" : ""}  color="red"className="soppingCartIcon"> */}
                     <img
                       style={{ height: 300, width: 300 }}
                       alt="example"
-                      src={props.obj.image}
+                      src={obj.image}
                     />
 
                     {/* </Badge> */}
@@ -50,7 +47,7 @@ const BestSellerProductCard  = (props) => {
                     <img
                       style={{ height: 300, width: 300 }}
                       alt="example"
-                      src={props.obj.image}
+                      src={obj.image}
                     />
 
                     {/* </Badge> */}
@@ -60,18 +57,18 @@ const BestSellerProductCard  = (props) => {
             }
           >
             <Card.Meta
-              title={props.obj.title}
+              title={obj.title}
               description={
                 <Typography.Paragraph style={{ fontSize: "18px" }}>
                   {"$ "}
-                  {props.obj.lastPrice}{" "}
+                  {obj.lastPrice}{" "}
                   <Typography.Text
                     delete
                     type="danger"
                     style={{ fontSize: "18px" }}
                   >
                     {"$ "}
-                    {props.obj.originalPrice}
+                    {obj.originalPrice}
                   </Typography.Text>
                 </Typography.Paragraph>
               }
@@ -81,7 +78,7 @@ const BestSellerProductCard  = (props) => {
               allowClear={false}
               allowHalf
               disabled
-              value={props.obj.rating}
+              value={obj.rating}
             />
 
             {hoveredCardIndex === index && (

@@ -1,9 +1,8 @@
-import { List, Card, Button, Space, Badge, Typography, Rate } from "antd";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { List  } from "antd"; 
 import { useState } from "react";
 import "../../App.css";
 import { BestSellerProductCard } from "../../common";
-import BestSellerProductsList from "../ProductDetails/ProductsLists/BestSellerProductsList";
+import RelatedProductsList from "../ProductDetails/ProductsLists/RelatedProductsList";
 
 const RelatedProductsSections = () => {
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
@@ -30,7 +29,7 @@ const RelatedProductsSections = () => {
       <h1 style={{ fontWeight: "normal" }}>RELATED PRODUCTS</h1>
       <List
         grid={{ column: 4 }}
-        dataSource={BestSellerProductsList}
+        dataSource={RelatedProductsList}
         size="small"
         style={{ marginTop: 50, width: "80%" }}
         renderItem={(item, index) => (
