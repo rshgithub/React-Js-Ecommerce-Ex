@@ -1,9 +1,9 @@
 import React from "react";
-import Payment from "../../assets/payments.png";
-import { Col, Divider,Image, Row} from 'antd';
-import { createFromIconfontCN } from '@ant-design/icons';
-import { Space } from 'antd';
-import '../../../src/Styles/Footer.scss'
+import Payment from "../assets/payments.png";
+import { Space , Col, Divider,Image, Row} from 'antd';
+import { createFromIconfontCN } from '@ant-design/icons'; 
+import "../App.css"
+
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
 });
@@ -105,7 +105,7 @@ const IconFont = createFromIconfontCN({
                 <span className="text">
                 © 2018 Ecommerce theme by www.bisenbaev.com
                 </span>
-                <Image src={Payment} />
+                <Image preview={false} src={Payment} />
             </div>
         </div>
     </div>

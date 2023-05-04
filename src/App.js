@@ -1,8 +1,7 @@
-import "./App.css"; 
+// import "./App.scss";
 import {
   AdvantageCard,
   BestSellerSection,
-  CenterBannerSection,
   FeaturedProductCard,
   HeaderBannerImages,
   ImageSlider,
@@ -10,25 +9,20 @@ import {
   LatestNewsCard,
   PageBotton,
 } from "./components/HomePage";
-import {
-  NewsletterCard
-} from "./components/NewsLetter";
-
+import { NewsletterCard } from "./components/NewsLetter";
 
 import { BrowserRouter } from "react-router-dom";
-import { HomePage } from "./pages";
-import { ContactUs, Footer, Header, Navbar } from "../common";
+import { HomePage, ProductDetails } from "./pages";
+import { Footer, Header, Navbar } from "../src/common";
 
 function App() {
   return (
     <div className="App">
-      
       <Header />
       <BrowserRouter>
         <Navbar />
       </BrowserRouter>
-      <HomePage />
-      <ContactUs />
+      <ProductDetails />
       <Footer />
     </div>
   );

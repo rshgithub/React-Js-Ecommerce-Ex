@@ -1,8 +1,8 @@
 import React from "react";
 import { Button,  Image, Row, Col } from "antd";
-import "../../App.css";
+import "../App.css";
 
-const CenterBannerSection = () => {
+const AdsSection = () => {
   return (
     <div>
       <Row style={{ backgroundColor: "#2E90E5" }}>
@@ -40,4 +40,4 @@ const CenterBannerSection = () => {
   );
 };
 
-export default CenterBannerSection;
+export default AdsSection;

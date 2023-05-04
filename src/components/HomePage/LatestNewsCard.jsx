@@ -28,6 +28,8 @@ const data = [
   },
 ];
 
+
+
 const LatestNewsCard = () => {
   return (
     <div
