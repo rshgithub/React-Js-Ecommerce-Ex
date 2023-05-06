@@ -1,12 +1,6 @@
-import { Badge, Button, Card, Menu, Radio, Slider, Timeline } from 'antd';
-import React, { useState } from 'react';
+import { Badge, Button, Card, Menu, Slider } from 'antd';
+import React from 'react';
 function CenterSidbarSection() {
-const [current, setCurrent] = useState('2');
-const [value, setValue] = useState(1);
-const onChange = (e) => {
-console.log('radio checked', e.target.value);
-setValue(e.target.value);
-};
 
 return (
 <div>
@@ -28,7 +22,7 @@ width: 256,
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)",
 }}
-selectedKeys={[current]}
+
 items={[
 {key:'1',label:'Apple Car',itemIcon:2},
 {key:'2',label:'Air port & wireless', itemIcon:48},
@@ -98,7 +92,6 @@ width: 256,
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)"
 }}
-selectedKeys={[current]}
 items={[
 {key:'1',label:'Apple',itemIcon:99},
 {key:'2',label:'LG', itemIcon:99},

@@ -8,24 +8,13 @@ const onClick = (e) => {
 console.log('click ', e);
 setCurrent(e.key);
 };
-
 const centerStyle = {
 position: 'relative',
 display: 'flex',
 justifyContent: 'center'
 };
-return (
-<Container>
-<Row align="center">
-<Col span={6} offset={6}>
-<div className="logo">
-<h1>BOUNCER</h1>
-      </div>
-</Col>
-</Row>
-<Row align="center">
-<Col span={12} offset={6}>
-<Menu style={centerStyle}  onClick={onClick} selectedKeys={[current]} mode="horizontal" items={[
+
+const items=[
 {
 label: 'HOME',
 key: 'home',
@@ -58,8 +47,21 @@ key: 'macbook',
 {
 label: 'ACCESORIES',
 key: 'accesories',
-},
-]}>
+}
+];
+
+return (
+<Container>
+<Row align="center">
+<Col span={6} offset={6}>
+<div className="logo">
+<h1>BOUNCER</h1>
+</div>
+</Col>
+</Row>
+<Row align="center">
+<Col span={12} offset={6}>
+<Menu style={centerStyle}  onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}>
 </Menu>
 </Col>
 </Row>
@@ -86,25 +88,25 @@ label: 'Category',
 key:'category',
 children: [
 {
-  label: 'AirPort & Wireless',
-  key: 'air',
+label: 'AirPort & Wireless',
+key: 'air',
 },
 {
-  label: 'AppleCare',
-  key: 'applecare',
+label: 'AppleCare',
+key: 'applecare',
 },
 {
-    label: 'Bags, Shells & Sleeves',
-    key: 'bags',
-  },
-  {
-    label: 'Business & Security',
-    key: 'business',
-  },
-  {
-    label: 'Cables & Docks',
-    key: 'cables',
-  },
+label: 'Bags, Shells & Sleeves',
+key: 'bags',
+},
+{
+label: 'Business & Security',
+key: 'business',
+},
+{
+label: 'Cables & Docks',
+key: 'cables',
+},
 ],
 }
 ]}
@@ -121,17 +123,17 @@ label: '',
 key:'',
 children: [
 {
-  label: ' Cameras & Video',
-  key: 'Cameras',
+label: ' Cameras & Video',
+key: 'Cameras',
 },
 {
-  label: 'Car & Travel',
-  key: 'Car',
+label: 'Car & Travel',
+key: 'Car',
 },
 {
-    label: 'Cases & Films',
-    key: 'Cases',
-  }
+label: 'Cases & Films',
+key: 'Cases',
+}
 ],
 }
 ]}
@@ -147,25 +149,25 @@ label: 'Category',
 key:'category',
 children: [
 {
-  label: 'Charging Devices',
-  key: 'Charging',
+label: 'Charging Devices',
+key: 'Charging',
 },
 {
-  label: 'Connected Home',
-  key: 'Connected',
+label: 'Connected Home',
+key: 'Connected',
 },
 {
-    label: 'Device Care',
-    key: 'Device',
-  },
-  {
-    label: 'Display & Graphic',
-    key: 'Display',
-  },
-  {
-    label: 'Fitness & Sport',
-    key: 'Fitness',
-  },
+label: 'Device Care',
+key: 'Device',
+},
+{
+label: 'Display & Graphic',
+key: 'Display',
+},
+{
+label: 'Fitness & Sport',
+key: 'Fitness',
+},
 ],
 }
 ]}
@@ -182,12 +184,12 @@ label: '',
 key:'',
 children: [
 {
-  label: 'Headphones',
-  key: 'Headphones',
+label: 'Headphones',
+key: 'Headphones',
 },
 {
-  label: 'HealhKit',
-  key: 'HealhKit',
+label: 'HealhKit',
+key: 'HealhKit',
 }
 ],
 }
@@ -205,17 +207,17 @@ label: 'Category',
 key:'category',
 children: [
 {
-  label: 'Mice & Keyboards',
-  key: 'Mice',
+label: 'Mice & Keyboards',
+key: 'Mice',
 },
 {
-  label: 'Music Creation',
-  key: 'Music',
+label: 'Music Creation',
+key: 'Music',
 },
 {
-    label: 'Networking & Server',
-    key: 'Networking',
-  }
+label: 'Networking & Server',
+key: 'Networking',
+}
 ],
 }
 ]}

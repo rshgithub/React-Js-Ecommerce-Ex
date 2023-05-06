@@ -1,14 +1,13 @@
-import React, {  useState } from "react";
+import React from "react";
 import { Carousel,Row,Col,Image} from 'antd';
 import Iphone from '../../assets/MaskGroup1.png'
 import "../HomePage.css";
 
 const ImageSlider = () => {
-const [dotPosition, setDotPosition] = useState('bottom');
 
 return (
 <>
-<Carousel dotPosition={dotPosition}
+<Carousel dotPosition='bottom'
 style={{backgroundImage: "linear-gradient(to right, rgba(255,0,0), rgba(213,83,151),rgba(153,98,240))",}}>
 <Row>
 <Col
@@ -21,7 +20,7 @@ alignItems: "center",
 
 }}
 >
-<h2 style={{ color: 'white' , fontSize: 36 , fontWeight:"bold" ,  }} >iPhone X</h2>
+<h2 style={{ color: 'white' , fontSize: 36 , fontWeight:"bold"}} >iPhone X</h2>
 <p style={{ color: 'white' , fontSize: 14 }} >
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.
 </p> 
