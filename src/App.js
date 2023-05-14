@@ -1,8 +1,7 @@
 import "./App.scss";
-import {Breadcrumb,ProductGrid,Cart} from './components/Products-Grid/index' 
+import {Breadcrumb,ProductGrid} from './components/Products-Grid/index' 
 import {Header,Navbar,Footer,ImageSlider} from './components/HomePage/index' 
 //import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 
 function App() {
 return (
@@ -11,7 +10,9 @@ return (
 <Header/>
 <Navbar/>
 <Breadcrumb/>
+
 <ProductGrid/> 
+{/* <ImageSlider/> */}
 <Footer/>
 </div>
 );

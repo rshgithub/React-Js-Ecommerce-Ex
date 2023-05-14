@@ -7,15 +7,16 @@ import React, { Component } from 'react'
 export class ListCard extends Component {
 render() {
 return (
-<div style={{marginBottom:"1rem"}}>
-<Card hoverable style={{textAlign:'left'}}>
+
+<Card hoverable 
+span={12} offset={6}
+style={{textAlign:'left',marginBottom:"1rem" ,width:'100%'}}>
 <Meta
 avatar={
-
 <Badge.Ribbon placement="start" text="HOT" color="red">
 <Avatar 
 shape='square'
-size={{md:240, lg:240, xl:240, xxl:240}}
+size={{xs:140,sm:240 ,md:240, lg:240, xl:240, xxl:240}}
 src='https://www.pcgalore.com/public/assets/images/pcgalore-macbook-pro-13-a2159-i5-1-4ghz-8gb-128gb-ssd-2019--192389717-16938.webp'
 
 />
@@ -23,10 +24,9 @@ src='https://www.pcgalore.com/public/assets/images/pcgalore-macbook-pro-13-a2159
 }
 title='Beats Solo2 On Ear Headphones - Black'
 description={<>
-<div> 
 <Rate disabled defaultValue={4} />
 <Typography.Text style={{padding:'10px', color:"rgb(0,0,0,.2)",fontWeight:'bold'}}>0 reviews</Typography.Text>    
-<Link style={{padding:'10px', fontWeight:'500'}}>Submit a review</Link></div>
+<Link style={{padding:'10px', fontWeight:'500'}}>Submit a review</Link>
 <Divider></Divider>
 <Typography.Text
 type="secondary"
@@ -34,7 +34,6 @@ style={{ fontSize: "18px",color:'red' }}
 >
 $499
 </Typography.Text>
-
 
 <Typography.Text
 delete
@@ -67,7 +66,6 @@ style={{ backgroundColor: "rgb(51,160,255,.2)",border:'none'}}
 }
 />
 </Card>
-</div>
 )
 }
 }

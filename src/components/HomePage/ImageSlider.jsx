@@ -1,72 +1,112 @@
-import React, {  useState } from "react";
-import { Carousel,Row,Col,Image} from 'antd';
-import Iphone from '../../assets/MaskGroup1.png'
-import "../HomePage.css";
+import React from "react";
+import Iphone from "../../assets/MaskGroup1.png";
+import Banner from "../../assets/Banners.png";
+import { Image } from "antd";
 
 const ImageSlider = () => {
-const [dotPosition, setDotPosition] = useState('bottom');
+  return (
+    <>
+      <div
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,0,0), rgba(213,83,151),rgba(153,98,240))",
+        }}
+      >
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner">
+            <div className="item active">
+              <img src={Iphone} style={{ width: "50%" }} />
+              <div className="carousel-caption">
+                <h3>iPhone X</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+                  lobortis consequat eu, quam etiam at quis ut convallis.
+                </p>
+                <a
+                  href="#"
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                    borderBottom: "3px solid white",
+                  }}
+                >
+                  MORE
+                </a>
+              </div>
+            </div>
 
-return (
-<>
-<Carousel dotPosition={dotPosition}
-style={{backgroundImage: "linear-gradient(to right, rgba(255,0,0), rgba(213,83,151),rgba(153,98,240))",}}>
-<Row>
-<Col
-log={6}
-style={{
-display: "flex",
-flexDirection: "column",
-justifyContent: "center",
-alignItems: "center",
+            <div className="item">
+              <img src={Iphone} style={{ width: "50%" }} />
+              <div className="carousel-caption">
+                <h3>iPhone X</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+                  lobortis consequat eu, quam etiam at quis ut convallis.
+                </p>
+                <a
+                  href="#"
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                    borderBottom: "3px solid white",
+                  }}
+                >
+                  MORE
+                </a>
+              </div>
+            </div>
 
-}}
->
-<h2 style={{ color: 'white' , fontSize: 36 , fontWeight:"bold" ,  }} >iPhone X</h2>
-<p style={{ color: 'white' , fontSize: 14 }} >
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.
-</p> 
-<a href="#" style=
-{{color: 'white' ,fontWeight:"bold"}}>MORE</a>
-<Image
-style={{
-display: "flex",
-justifyContent: "left",
-alignItems: "left",}}
-src={Iphone}
-height="400px"
-width="400px"
-preview={false}/>
-</Col>
+            <div className="item">
+              <img src={Iphone} style={{ width: "50%" }} />
+              <div className="carousel-caption">
+                <h3>iPhone X</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+                  lobortis consequat eu, quam etiam at quis ut convallis.
+                </p>
+                <a
+                  href="#"
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                    borderBottom: "3px solid white",
+                  }}
+                >
+                  MORE
+                </a>
+              </div>
+            </div>
+          </div>
 
-</Row>
-<Col log={6}>
-<Image
-style={{
-display: "flex",
-justifyContent: "right",
-alignItems: "right",}}
-src={Iphone}
-height="400px"
-width="400px"
-preview={false}/>
-</Col>
-{/*<Image src={Banner} style={{
-position: "absolute",
-alignItems: "center",
-justifyContent: "center",
-flexWrap: "wrap"
-}} 
-preview={false}/>*/}
-
-
-</Carousel>
-
-
-
-</>
-);
-}
-
-
+          <a
+            className="left carousel-control"
+            href="#myCarousel"
+            data-slide="prev"
+          >
+            <span className="glyphicon glyphicon-chevron-left"></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a
+            className="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span className="glyphicon glyphicon-chevron-right"></span>
+            <span className="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div
+        style={{
+          bottom: "90%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Image src={Banner} preview={false} />
+      </div>
+    </>
+  );
+};
 
 export default ImageSlider;
