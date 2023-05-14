@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.scss'
+import "../App.css"
 import { CaretDownFilled, SearchOutlined, ShoppingOutlined, UserOutlined} from '@ant-design/icons';
 import { Breadcrumb, Col, Divider, Dropdown, Row , Space} from 'antd';
 import { Container } from "reactstrap";
@@ -7,7 +7,7 @@ import BreadcrumbSeparator from 'antd/es/breadcrumb/BreadcrumbSeparator';
 
 const AppHeader = () => (
   <Container>
-       <Row>
+       <Row className='container'>
       <Col span={12}>
       <Space>
         <Dropdown disabled >
