@@ -19,7 +19,7 @@ const SelectProductColorOptios = () => {
     <Radio.Button
       key={option.value}
       value={option.value}
-      style={{ borderRadius: "50%", padding:5 , margin:5 }}
+      style={{ borderRadius: "50%", padding:5 , margin:5}}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         <div
@@ -28,6 +28,7 @@ const SelectProductColorOptios = () => {
             width: 20,
             height: 20,
             borderRadius: "50%",
+           
           }}
         />
       </div>

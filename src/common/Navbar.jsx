@@ -55,14 +55,22 @@ const NavBar = () => {
   return (
     <Container>
       <Row align="center">
-        <Col span={6} offset={6}>
+        <Col
+          span={6}
+          offset={6}
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <div className="logo">
             <h1>BOUNCER</h1>
           </div>
         </Col>
       </Row>
       <Row align="center">
-        <Col span={12} offset={6}>
+        <Col
+          span={12}
+          offset={6}
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <Menu
             style={centerStyle}
             onClick={onClick}
@@ -150,7 +158,7 @@ function MegaMenu() {
               ],
             },
           ]}
-          style={{ box: "none", border: "none" }}
+          style={{ box: "none", border: "none", marginBottom: "60%" }}
         ></Menu>
         <Menu
           onClick={onMenuItemClick}
@@ -207,7 +215,7 @@ function MegaMenu() {
               ],
             },
           ]}
-          style={{ box: "none", border: "none" }}
+          style={{ box: "none", border: "none", marginBottom: "70%" }}
         ></Menu>
 
         <Menu
@@ -234,7 +242,7 @@ function MegaMenu() {
               ],
             },
           ]}
-          style={{ box: "none", border: "none" }}
+          style={{ box: "none", border: "none", marginBottom: "60%" }}
         ></Menu>
       </Space>
     </div>

@@ -6,6 +6,7 @@ import {
   FeaturedProductCard,
   SearchBar,
   LatestNewsCard,
+  ImageSlider,
 } from "../components/HomePage";
 import { AdsSection } from "../common";
 import { BrowserRouter } from "react-router-dom";
@@ -13,6 +14,7 @@ import { BrowserRouter } from "react-router-dom";
 const HomePage = () => {
   return (
     <div style={{ textAlign: "center" }}>
+      <ImageSlider />
       <BrowserRouter>
         <BestSellerSection />
       </BrowserRouter>

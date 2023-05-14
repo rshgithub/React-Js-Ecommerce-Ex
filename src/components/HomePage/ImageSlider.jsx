@@ -98,12 +98,15 @@ const ImageSlider = () => {
       </div>
       <div
         style={{
-          bottom: "90%",
+          top: "108%",
           display: "flex",
           justifyContent: "center",
+          position: "absolute",
+          left: "15%",
+          right: "15%",
         }}
       >
-        <Image src={Banner} preview={false} />
+        <Image src={Banner} preview={false} height="300px" />
       </div>
     </>
   );

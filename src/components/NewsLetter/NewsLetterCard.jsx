@@ -35,7 +35,7 @@ const NewsletterCard = () => {
             >
               <Checkbox />
               <Text style={{ marginLeft: 10 }}>
-              Don’t show this popup again              </Text>
+              Don’t show this popup again</Text>
             </div>
           </div>
 

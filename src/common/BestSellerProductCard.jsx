@@ -12,7 +12,6 @@ import {
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import "../App.css";
-import { useHistory } from "react-router-dom";
 
 const BestSellerProductCard = ({ index, obj }) => {
   // const history = useHistory();

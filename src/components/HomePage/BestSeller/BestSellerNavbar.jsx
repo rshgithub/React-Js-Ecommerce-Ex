@@ -11,14 +11,15 @@ function BestSellerNavbar() {
   };
 
   return (
-    <Menu 
+    <Menu
       className="appMenu"
-      style={{ 
-      marginBottom : 20 ,  
-      osition: 'relative',
-      borderBottom:'none',
-      display: 'flex',
-      justifyContent: 'center'}}
+      style={{
+        marginBottom: 20,
+        osition: "relative",
+        borderBottom: "none",
+        display: "flex",
+        justifyContent: "center",
+      }}
       onClick={onMenuClick}
       mode="horizontal"
       items={[
@@ -27,40 +28,24 @@ function BestSellerNavbar() {
           key: "",
         },
         {
-          label: "Men's Shirts",
-          key: "mens-shirts",
+          label: "Mac",
+          key: "mac",
         },
         {
-          label: "Men's Shoes",
-          key: "mens-shoes",
+          label: "iPhone",
+          key: "iphone",
         },
         {
-          label: "Men's Watches",
-          key: "mens-watches",
+          label: "iPad",
+          key: "ipad",
         },
         {
-          label: "Women's Dresses",
-          key: "womens-dresses",
+          label: "iPod",
+          key: "ipod",
         },
         {
-          label: "Women's Shoes",
-          key: "womens-shoes",
-        },
-        {
-          label: "Women's Watches",
-          key: "womens-watches",
-        },
-        {
-          label: "Women's Bags",
-          key: "womens-bags",
-        },
-        {
-          label: "Women's Jewellery",
-          key: "womens-jewellery",
-        },
-        {
-          label: "Fragrances",
-          key: "fragrances",
+          label: "Accessories",
+          key: "accessories",
         },
       ]}
     />
