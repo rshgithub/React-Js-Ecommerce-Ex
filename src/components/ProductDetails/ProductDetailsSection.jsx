@@ -5,8 +5,8 @@ import "../../App.css";
 import {
   ProductOptions,
   SelectProductColorOptios,
-} from "../../components/ProductDetails";
-import ProductSizeDropList from "../../components/ProductDetails/ProductSizeDropList"; 
+  ProductSizeDropList,
+} from "../../components/ProductDetails"; 
 
 const ProductDetailsSection = (props) => {
  

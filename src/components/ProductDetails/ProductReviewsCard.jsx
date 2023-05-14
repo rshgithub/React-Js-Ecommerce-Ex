@@ -1,7 +1,7 @@
 import React from "react";
 import { Rate, Card, List, Avatar, Space } from "antd";
 import { UserOutlined } from "@ant-design/icons";
-import ProductReviewsList from "../ProductDetails/ProductsLists/ProductReviewsList";
+import ProductReviewsList from "../../utils/ProductsLists/ProductReviewsList";
 
 const ProductReviewsCard = () => {
  

@@ -1,62 +1,39 @@
 import React from "react";
-import { Icon , List, Card } from "antd";
-
-import { DollarCircleOutlined , PhoneOutlined , ShoppingCartOutlined } from "@ant-design/icons";
-
-const data = [
-  {
-    key: 1,
-    title: "FREE SHIPPING",
-    icon: (
-      <ShoppingCartOutlined 
-        style={{ fontSize: "36px", color: "#f5222d"  }}
-      />
-    ),
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-  },
-  {
-    key: 2,
-    title: "100% REFUND",
-    icon: (
-      <DollarCircleOutlined 
-        style={{ fontSize: "36px", color: "#f5222d"  }}
-      />
-    ),
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-  },
-  {
-    key: 3,
-    title: "SUPPORT 24/7",
-    icon: (
-      <PhoneOutlined 
-        style={{ fontSize: "36px", color: "#f5222d"  }}
-      />
-    ),
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-  },
-];
+import { Icon , List, Card, Col } from "antd";
+ import AdvantagesList from "../../utils/ProductsLists/AdvantagesList"
 
 const AdvantageCard = () => {
   return (
-    <div  style={{marginLeft : 300 , marginRight: 300 , marginTop : 40 , marginBottom: 40}} >
-      <List
-        grid={{ column: 3 }}
-        dataSource={data}
-        renderItem={(item) => (
-          <List.Item>
-            <Card  style={{ border: 'none' }} >
-              <div style={{ display: "flex" }}>
-                <div >
-                {item.icon}
-                  <h3 style={{ marginTop : 15   }}>{item.title}</h3>
-                  <p style={{ marginTop: 15 }}>{item.desc}</p>
-                </div>
-              </div>
-            </Card>
-          </List.Item>
-        )}
-      />
-    </div>
+<div className="list" >
+  <List
+    grid={{
+      gutter: 16,
+      xs: 1,
+      sm: 1,
+      md: 2,
+      lg: 2,
+      xl: 3,
+      xxl: 3,
+    }}
+    dataSource={AdvantagesList}
+    renderItem={(item) => (
+      <List.Item>
+        <Card style={{ border: 'none'  }}>
+          <Col style={{textAlign : "center"}}>
+            <div>
+              {item.icon}
+            </div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
+          </Col>
+        </Card>
+      </List.Item>
+    )}
+  />
+</div>
+
   );
 };
 

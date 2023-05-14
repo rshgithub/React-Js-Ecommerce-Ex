@@ -6,4 +6,5 @@ export { default as ProductReviewsCard } from "./ProductReviewsCard";
 export { default as RelatedProductsSections } from "./RelatedProductsSections";
 export { default as SelectProductColorOptios } from "./SelectProductColorOptios";
 export { default as ProductAdSection } from "./ProductAdSection";
+export { default as ProductSizeDropList } from "./ProductSizeDropList";
  

@@ -1,16 +1,7 @@
-import {
-  AdvantageCard,
-  BestSellerSection,
-  FeaturedProductCard,
-  HeaderBannerImages,
-  ImageSlider,
-  SearchBar,
-  LatestNewsCard,
-  PageBotton,
-} from "./components/HomePage";
+ 
 
 import { BrowserRouter } from "react-router-dom";
-import {  ProductDetails } from "./pages";
+import {  HomePage, ProductDetails } from "./pages";
 import { Footer, Header, Navbar } from "../src/common";
 
 function App() {
@@ -22,6 +13,9 @@ function App() {
       </BrowserRouter>
       <ProductDetails />
       <Footer />
+
+
+      
     </div>
   );
 }
