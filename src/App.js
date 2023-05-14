@@ -1,21 +1,25 @@
-import "./App.scss";
-import {Breadcrumb,ProductGrid} from './components/Products-Grid/index' 
-import {Header,Navbar,Footer,ImageSlider} from './components/HomePage/index' 
-//import { BrowserRouter, Route, Routes } from 'react-router-dom';
+ 
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import {  HomePage, ProductDetails } from "./pages";
+import { Footer, Header, Navbar } from "../src/common";
 
 function App() {
-return (
-<div className="App">
+  return (
+    <div className="App">
+      <Header />
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+      <ProductDetails />
+      <Footer />
 
-<Header/>
-<Navbar/>
-<Breadcrumb/>
 
-<ProductGrid/> 
-{/* <ImageSlider/> */}
-<Footer/>
-</div>
-);
+      
+    </div>
+  );
 }
 
 export default App;
+
+

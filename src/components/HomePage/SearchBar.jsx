@@ -5,9 +5,14 @@ const { Search } = Input;
 
 const SearchBar = () => {
   return (
-    <div>
-          <Search style={{width: 600 , margin : 40 }} placeholder="input search text" enterButton="Search" size="large" />
-    </div>
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <Search
+    style={{ width: "90%", maxWidth: 600, margin: "40px 0" }}
+    placeholder="input search text"
+    enterButton="Search"
+    size="large"
+  />
+</div>
   )
 }
 
