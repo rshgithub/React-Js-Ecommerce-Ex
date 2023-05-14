@@ -1,15 +1,15 @@
-import { Badge, Button, Card, Menu, Slider } from 'antd';
+import { Badge, Button, Card, Menu, Slider , Row, Col } from 'antd';
 import React from 'react';
 function CenterSidbarSection() {
 
 return (
-<div>
-
+<Row>
+<Col span={12} offset={6}>
 <Card
 title="ACCESORIES"
 bordered={false}
 style={{
-width: 300,
+width: 280,
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)"
 
@@ -18,7 +18,6 @@ backgroundColor:"rgb(250,250,251)"
 <Menu
 mode="inline"
 style={{
-width: 256,
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)",
 }}
@@ -39,14 +38,14 @@ items={[
 title='PRICES'
 bordered={false}
 style={{
-width: 300,
+width: 280,
 marginTop:"1rem",
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)"
 
 }}
 >
-<p>Renger : $13.99 - $25.99</p>
+<p>Renger : <span style={{paddingLeft:'30%'}}>$13.99 - $25.99</span> </p>
 <Slider
 range={{
 draggableTrack: true,
@@ -59,27 +58,27 @@ defaultValue={[20, 100]}
 title="COLOR"
 bordered={false}
 style={{
-width: 300,
+width: 280,
 marginTop:"1rem",
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)"
 }}>
 
 <Button style={{backgroundColor:"rgb(250,250,251)",border:'none',padding:'1px'}}>
-  <Badge color='#006CFF' count={5} style={{color:'#006CFF'}}/>
-  <Badge color='#FC3E39'count={5} style={{color:'#FC3E39'}} />
-  <Badge color='#171717'count={5} style={{color:'#171717'}} />
-  <Badge color='#FFF600' count={5}style={{color:'#FFF600'}} />
-  <Badge color='#FF00B4' count={5}style={{color:'#FF00B4'}} />
-  <Badge color='#EFDFDF' count={5} style={{color:'#EFDFDF'}}/>
-  </Button>
+<Badge color='#006CFF' count={5} style={{color:'#006CFF'}}/>
+<Badge color='#FC3E39'count={5} style={{color:'#FC3E39'}} />
+<Badge color='#171717'count={5} style={{color:'#171717'}} />
+<Badge color='#FFF600' count={5}style={{color:'#FFF600'}} />
+<Badge color='#FF00B4' count={5}style={{color:'#FF00B4'}} />
+<Badge color='#EFDFDF' count={5} style={{color:'#EFDFDF'}}/>
+</Button>
 </Card>
 
 <Card
 title="BRAND"
 bordered={false}
 style={{
-width: 300,
+width: 280,
 marginTop:"1rem",
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)" 
@@ -88,7 +87,6 @@ backgroundColor:"rgb(250,250,251)"
 <Menu
 mode="inline"
 style={{
-width: 256,
 textAlign:'left',
 backgroundColor:"rgb(250,250,251)"
 }}
@@ -104,13 +102,15 @@ items={[
 <Button
 size='large'
 style={{
-width:300,
+width: 280,
 backgroundColor:"rgb(250,250,251)"
 ,border:'none'
 }}>
 MORE
 </Button>
-</div>
+</Col>
+</Row>
+
 );
 };
 export default CenterSidbarSection;

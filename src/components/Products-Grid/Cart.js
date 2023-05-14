@@ -1,5 +1,4 @@
 import { Table } from 'antd';
-import {CloseCircleFilled} from '@ant-design/icons'
 const columns = [
   {
     title: 'PRODUCT',

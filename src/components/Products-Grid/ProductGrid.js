@@ -4,9 +4,9 @@ const {Sider, Content } = Layout;
 
 const contentStyle = {
 textAlign: 'center',
-minHeight: 120,
 lineHeight: '120px',
 backgroundColor: '#fff',
+
 };
 const siderStyle = {
 textAlign: 'center',
@@ -19,10 +19,10 @@ const ProductGrid = () => (
 className='container'
 style={{backgroundColor:'#fff'}}>
 <Row>
-<Col span={6}>
+<Col flex="0 1 200px" style={{marginRight:'15%'}}> 
 <Sider style={siderStyle}><CenterSidbarSection/></Sider>
 </Col>
-<Col span={18}>
+<Col flex="1 1 300px" >
 <Content style={contentStyle}>
 <Banner/>
 <Gridview/>
