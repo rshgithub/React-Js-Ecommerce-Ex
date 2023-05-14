@@ -21,19 +21,19 @@ const ProductImagesSection = () => {
 
         <Image
           style={{ objectFit: "cover" }}
-          width={450}
-          height={450}
+          width={520}
+          height={520}
           preview={false}
           src={productMainImage}
         />
 
-        <div style={{ marginTop: 10 }}>
+        <div style={{ marginTop: 15 }}>
           <Row gutter={[16, 16]}>
             {productSmallImages.map((imageUrl) => (
               <Col key={imageUrl}>
                 <Image
-                  width={100}
-                  height={100}
+                  width={120}
+                  height={120}
                   style={{ border: "2px solid #d9d9d9", padding: 5 }}
                   src={imageUrl}
                   onClick={() => handleSmallProductImageClick(imageUrl)}

@@ -1,50 +1,84 @@
-import React from 'react';
-import "../App.css"
-import { CaretDownFilled, SearchOutlined, ShoppingOutlined, UserOutlined} from '@ant-design/icons';
-import { Breadcrumb, Col, Divider, Dropdown, Row , Space} from 'antd';
+import React from "react";
+import "../App.css";
+import {
+  CaretDownFilled,
+  SearchOutlined,
+  ShoppingOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import { Breadcrumb, Button, Col, Divider, Dropdown, Row, Space } from "antd";
 import { Container } from "reactstrap";
-import BreadcrumbSeparator from 'antd/es/breadcrumb/BreadcrumbSeparator';
+import BreadcrumbSeparator from "antd/es/breadcrumb/BreadcrumbSeparator";
+const items = [
+  {
+    key: "1",
+    label: "EN",
+  },
+  {
+    key: "2",
+    label: "AR",
+  },
+];
 
 const AppHeader = () => (
   <Container>
-       <Row className='container'>
-      <Col span={12}>
-      <Space>
-        <Dropdown disabled >
-      <Space>
-      EN <CaretDownFilled /> 
-      </Space>
-  </Dropdown>
-  <Dropdown disabled >
-  <Space>
-      USD <CaretDownFilled /> 
-      </Space>
-     </Dropdown>
-     </Space>
+    <Row
+      style={{
+        display: "flex",
+        //justifyContent: 'left',
+        paddingTop: "10px",
+      }}
+      justify={"start"}
+    >
+      <Col xs={24} sm={6} md={6} lg={6} xl={6}>
+        <Space>
+          <Dropdown menu={{ items }}>
+            <Space>
+              EN <CaretDownFilled />
+            </Space>
+          </Dropdown>
+          <Dropdown menu={{ items }}>
+            <Space>
+              USD <CaretDownFilled />
+            </Space>
+          </Dropdown>
+        </Space>
       </Col>
-      <Col span={12}>
-      <Breadcrumb>
-    <BreadcrumbSeparator>
-    <UserOutlined /> 
-    <span>My profile</span>
-    </BreadcrumbSeparator>
-    <BreadcrumbSeparator>
-    <ShoppingOutlined />
-      <span>0 Items</span>
-    </BreadcrumbSeparator>
-    <BreadcrumbSeparator>
-      <span>$0.00</span>
-    </BreadcrumbSeparator>
-    <BreadcrumbSeparator>
-    <SearchOutlined />
-    </BreadcrumbSeparator>
-  </Breadcrumb>
-
+      <Col
+        xs={24}
+        sm={6}
+        md={8}
+        lg={6}
+        xl={16}
+        style={{
+          display: "flex",
+          justifyContent: "right",
+        }}
+      >
+        <Breadcrumb>
+          <BreadcrumbSeparator>
+            <a style={{ color: "black" }}>
+              <UserOutlined /> My profile
+            </a>
+          </BreadcrumbSeparator>
+          <BreadcrumbSeparator>
+            <a style={{ color: "black" }}>
+              <ShoppingOutlined />0 Items
+            </a>
+          </BreadcrumbSeparator>
+          <BreadcrumbSeparator>
+            <a>$0.00</a>
+          </BreadcrumbSeparator>
+          <BreadcrumbSeparator>
+            <Button type="ghost" size="small">
+              <SearchOutlined />
+            </Button>
+          </BreadcrumbSeparator>
+        </Breadcrumb>
       </Col>
-      <Divider orientation="left"></Divider>
     </Row>
-       
-    </Container>
-  );
+    <Divider orientation="left"></Divider>
+  </Container>
+);
 
 export default AppHeader;

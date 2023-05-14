@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col } from "antd";
 import { CategoryNavbar } from "../common";
-import "../App.css";
+import "../App.css"; 
+
 import {
   BestSellerSection,
   ProductAdSection,
@@ -26,7 +27,9 @@ const product = {
   freeShipping: false,
 };
 
-const ProductDetails = (/*{ product }*/) => {
+const ProductDetails = () => {
+  // const { product } = useParams();
+
   const [productMainImage, setProductMainImage] = useState(
     "https://iplus.com.ge/images/detailed/5/iPhone_13_Pro_Max_Q222_Green_PDP_Image_Position-3__ww-GE_c74k-ty.jpg"
   );
@@ -44,40 +47,39 @@ const ProductDetails = (/*{ product }*/) => {
   return (
     <div
       style={{
-        paddingLeft: 100,
-        paddingRight: 100,
+        paddingLeft: 50,
+        paddingRight: 50,
         paddingTop: 20,
       }}
     >
-      <CategoryNavbar />  
+      <CategoryNavbar />
       <Row>
-                   <Col span={18}> 
-            <Row gutter={[60, 60]}>
-              <Col>
-                <ProductImagesSection className="productImagesPart" />
-              </Col>
+        <Col span={18}>
+          <Row gutter={[60, 60]}>
+            <Col>
+              <ProductImagesSection className="productImagesPart" />
+            </Col>
 
-              <Col className="ProductDetails" span={14}>
-                <ProductDetailsSection product={product} />
-              </Col>
-            </Row>
-            <ProductDescriptionSection product={product} />
-          </Col>
+            <Col className="ProductDetails" span={14}>
+              <ProductDetailsSection product={product} />
+            </Col>
+          </Row>
+          <ProductDescriptionSection product={product} />
+        </Col>
 
-          <Col className="adsPart" span={6}>
-            <h1
-              style={{
-                color: "lightGrey",
-                fontWeight: "normal",
-                textAlign: "left",
-              }}
-            >
-              Best Seller
-            </h1>
-            <BestSellerSection />
-            <ProductAdSection />
-          </Col> 
-
+        <Col className="adsPart" span={6}>
+          <h1
+            style={{
+              color: "lightGrey",
+              fontWeight: "normal",
+              textAlign: "left",
+            }}
+          >
+            Best Seller
+          </h1>
+          <BestSellerSection />
+          <ProductAdSection />
+        </Col>
       </Row>
 
       <RelatedProductsSections />

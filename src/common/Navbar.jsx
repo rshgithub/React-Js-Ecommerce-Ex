@@ -8,6 +8,50 @@ const NavBar = () => {
     console.log("click ", e);
     setCurrent(e.key);
   };
+  const centerStyle = {
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+  };
+
+  const items = [
+    {
+      label: "HOME",
+      key: "home",
+      children: [
+        {
+          label: <MegaMenu />,
+          key: "megamenu",
+          style: {
+            height: "fit-content",
+            padding: "0",
+            backgroundColor: "white",
+          },
+        },
+      ],
+    },
+    {
+      label: "STORE",
+      key: "store",
+    },
+    {
+      label: "IPHONE",
+      key: "iphone",
+    },
+    {
+      label: "IPAD",
+      key: "ipad",
+    },
+    {
+      label: "MACBOOK",
+      key: "macbook",
+    },
+    {
+      label: "ACCESORIES",
+      key: "accesories",
+    },
+  ];
+
   return (
     <Container>
       <Row align="center">
@@ -20,47 +64,11 @@ const NavBar = () => {
       <Row align="center">
         <Col span={12} offset={6}>
           <Menu
-            style={{ textAlign: "center" }}
+            style={centerStyle}
             onClick={onClick}
             selectedKeys={[current]}
             mode="horizontal"
-            items={[
-              {
-                label: "HOME",
-                key: "home",
-                children: [
-                  {
-                    label: <MegaMenu />,
-                    key: "megamenu",
-                    style: {
-                      height: "fit-content",
-                      padding: "0",
-                      backgroundColor: "white",
-                    },
-                  },
-                ],
-              },
-              {
-                label: "STORE",
-                key: "store",
-              },
-              {
-                label: "IPHONE",
-                key: "iphone",
-              },
-              {
-                label: "IPAD",
-                key: "ipad",
-              },
-              {
-                label: "MACBOOK",
-                key: "macbook",
-              },
-              {
-                label: "ACCESORIES",
-                key: "accesories",
-              },
-            ]}
+            items={items}
           ></Menu>
         </Col>
       </Row>

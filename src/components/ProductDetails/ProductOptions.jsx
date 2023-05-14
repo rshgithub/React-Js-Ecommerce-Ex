@@ -53,7 +53,7 @@ const ProductOptions = ({ product }) => {
   };
 
   return (
-    <div>
+    <div style={{ alignItems: "center", marginTop: 50 }}>
       <Row gutter={[16, 16]}>
         <Col Col span={15}>
           <div style={{ backgroundColor: "#F6F7F8", width: 130 }}>

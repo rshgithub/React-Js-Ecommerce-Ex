@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "antd";
 import { BestSellerProductCard } from "../../common";
 import "../../App.css";
-import BestSellerProductsList from "../ProductDetails/ProductsLists/BestSellerProductsList";
+import BestSellerProductsList from "../../utils/ProductsLists/BestSellerProductsList";
 
 const BestSellerSection = () => { 
  
