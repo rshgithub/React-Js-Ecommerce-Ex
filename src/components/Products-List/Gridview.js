@@ -1,7 +1,7 @@
 import { AppstoreTwoTone, MenuOutlined } from "@ant-design/icons";
 import { Button, Col, Row, Select, Typography } from "antd";
 import React, { Component } from "react";
-import ListCard from "./ListCard";
+import ListCardProducts from "./ListCardProducts";
 
 export class Gridview extends Component {
   render() {
@@ -62,13 +62,31 @@ export class Gridview extends Component {
             </Col>
           </Row>
         </div>
+
         <Row gutter={[20, 20]}>
-          <ListCard />
-          <ListCard />
-          <ListCard />
-          <ListCard />
-          <ListCard />
-          <ListCard />
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
+
+          <ListCardProducts />
         </Row>
       </>
     );

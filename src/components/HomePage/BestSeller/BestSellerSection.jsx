@@ -21,7 +21,7 @@ const BestSellerSection = () => {
 
       <List
         grid={{
-          gutter: 20,
+          gutter: 16,
           column: 4,
           xs: 1,
           sm: 1,
@@ -39,7 +39,7 @@ const BestSellerSection = () => {
         type="link"
         style={{ borderBottom: "2px solid blue", marginTop: 40 }}
       >
-        LOAD MORE{" "}
+        LOAD MORE
       </Button>
     </div>
   );

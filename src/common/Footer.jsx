@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="footer">
       <Divider orientation="left"></Divider>
       <Row className="footer-content">
-        <Col className="col">
+        <Col xs={24} xl={6}>
           <div className="super-title">BOUNCER</div>
           <div className="super-text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -21,7 +21,7 @@ const Footer = () => {
             ever. Since the 1500s, when an unknown printer.
           </div>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={6}>
           <div className="title">Follow Us</div>
           <div className="super-text">
             Since the 1500s, when an unknown printer took a galley of type and
@@ -32,7 +32,7 @@ const Footer = () => {
             <IconFont type="icon-twitter" style={{ color: "#03A9F4" }} />
           </Space>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={6}>
           <div className="title">Contact Us</div>
           <div className="c-item">
             <div className="text-item">
@@ -50,49 +50,49 @@ const Footer = () => {
           </div>
         </Col>
         <Divider orientation="left"></Divider>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">Information</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">Service</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">Useful Links</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">Extras</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">My Account</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">Userful Links</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col className="col">
+        <Col xs={24} xl={3}>
           <div className="title">Our Offers</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>

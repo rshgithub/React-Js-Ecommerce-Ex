@@ -1,34 +1,32 @@
- import "./App.css";
-import {  HomePage, ProductDetails,ProductGrid } from "./pages";
-import { Footer, Header, Navbar,CategoryNavbar } from "../src/common";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { HomePage, ProductDetails, ProductGrid, ProductsList } from "./pages";
+import { Footer, Header, Navbar } from "../src/common";
+import { BrowserRouter, BrowserRouter as Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-  
-      
-      {/* <BrowserRouter>
+      <BrowserRouter>
       <Header />
       <Navbar />
       <Routes>
-        <Route path="/" element={ <HomePage /> }/>
-       
+        <Route exact path="/" element={<HomePage />}/>
         </Routes>
-        <Footer />
-        </BrowserRouter> */}
-      <Header />
-      {/* <Navbar />
-      <HomePage/> */}
-      <ProductDetails/>
+        <Routes>
+          <Route exact path="/productgrid" element={< ProductGrid/>} />
+          </Routes>
+          <Routes>
+          <Route exact path="/productdetails" element={<ProductDetails />} />
+          </Routes>
       <Footer />
-     
 
-      
+    </BrowserRouter>
+      {/* <ProductsList /> */}
+      {/* <ProductGrid/> */}
+      {/* {<HomePage/>} */}
+     
     </div>
   );
 }
 
 export default App;
-
-

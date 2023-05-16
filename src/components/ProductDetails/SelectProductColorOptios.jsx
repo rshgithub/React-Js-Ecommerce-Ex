@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Radio } from "antd";
+import "../../App.css";
 
 const SelectProductColorOptios = () => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -39,6 +40,7 @@ const SelectProductColorOptios = () => {
     <Radio.Group
       value={selectedColor}
       onChange={handleColorChange}
+      buttonStyle="outline"
       style={{ display: "flex", flexDirection: "row" , marginTop: 10}}
     >
       {colorRadioButtons}

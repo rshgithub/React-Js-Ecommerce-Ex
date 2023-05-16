@@ -1,4 +1,3 @@
-
 .logo h1 {
   line-height: 1.5rem;
   color: rgba(250, 2, 2, 0.8);
@@ -97,6 +96,63 @@
   background-color: blue;
 }
 
+/*Switch Color */
+
+input[type="radio"]#Blue {
+  accent-color: #006cff;
+}
+
+input[type="radio"]#Red {
+  accent-color: #ff0000;
+}
+
+input[type="radio"]#Black {
+  accent-color: #171717;
+}
+
+input[type="radio"]#Yellow {
+  accent-color: yellow;
+}
+
+input[type="radio"]#Rose {
+  accent-color: #ff00b4;
+}
+
+input[type="radio"]#Pink {
+  accent-color: pink;
+}
+
+.css-lqqdgu {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  display: inline-block;
+  box-shadow: 0 0 0 2px inset #ffffff, 0 0 0 1px #1677ff;
+}
+.css-lqqdgu > input[type="radio"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.css-1j6rah6 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  display: inline-block;
+}
+.css-1j6rah6 > input[type="radio"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
 /* homepage -------------------------------------------------------------------- */
 /* .button-overlay {
   position: absolute; 
@@ -108,19 +164,18 @@
   padding-bottom: 45%;
   transform: translate(-50%, -50%);
   text-align: center; */
-  /* background-color: rgba(255, 255, 255, 0.742); */
-  /* background-color: rgba(120, 45, 45, 0.742);
+/* background-color: rgba(255, 255, 255, 0.742); */
+/* background-color: rgba(120, 45, 45, 0.742);
   z-index: 1%;
 } */
- 
- 
+
 .shop-now-button {
   color: white;
   border-bottom: 3px solid white;
-  border-top: 0px #2E90E5;
-  border-right: 0px #2E90E5;
-  border-left: 0px #2E90E5;
-  background-color: #2E90E5;
+  border-top: 0px #2e90e5;
+  border-right: 0px #2e90e5;
+  border-left: 0px #2e90e5;
+  background-color: #2e90e5;
 
   /* adjust width based on screen size */
   width: 50%;
@@ -136,7 +191,8 @@
 @media (max-width: 768px) {
   .shop-now-button {
     width: 50%;
-    max-width: 100px;  }
+    max-width: 100px;
+  }
 }
 
 /* product card -------------------------------------------------------------------- */
@@ -216,16 +272,13 @@
   margin-right: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
-  
 }
-
-
 
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 50px;
   }
-  
+
   p {
     font-size: 20px;
   }
@@ -235,14 +288,11 @@
   h2 {
     font-size: 25px;
   }
-  
+
   p {
     font-size: 15px;
   }
 }
-
- 
-
 
 .responsive-rate {
   font-size: 14px;
@@ -253,7 +303,6 @@
     font-size: 12px;
   }
 }
- 
 
 @media only screen and (max-width: 768px) {
   .card-image-overlay {
@@ -300,14 +349,3 @@
     font-size: 14px !important;
   }
 }
-
-
-
-
-
-
-
-
-
-
-

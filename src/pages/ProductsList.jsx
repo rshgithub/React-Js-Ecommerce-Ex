@@ -1,9 +1,6 @@
 import { Col, Layout, Pagination, Row } from "antd";
-import {
-  CenterSidbarSection,
-  Banner,
-  Gridview,
-} from "../components/Products-Grid/index";
+import { CenterSidbarSection, Banner } from "../components/Products-Grid/index";
+import Gridview from "../components/Products-List/Gridview";
 import { CategoryNavbar } from "../../src/common";
 const { Sider, Content } = Layout;
 
@@ -18,7 +15,7 @@ const siderStyle = {
   backgroundColor: "#fff",
 };
 
-const ProductGrid = () => (
+const ProductList = () => (
   <>
     <CategoryNavbar />
     <Layout className="container" style={{ backgroundColor: "#fff" }}>
@@ -38,6 +35,7 @@ const ProductGrid = () => (
               color: "black",
               background: "rgb(250,250,251)",
               textAlign: "center",
+              marginTop: "15px",
             }}
             defaultCurrent={3}
             total={50}
@@ -48,4 +46,4 @@ const ProductGrid = () => (
     </Layout>
   </>
 );
-export default ProductGrid;
+export default ProductList;

@@ -10,7 +10,7 @@ import {
 } from "antd";
 
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../App.css";
 
 const BestSellerProductCard = ({ index, obj }) => {
@@ -36,10 +36,11 @@ const BestSellerProductCard = ({ index, obj }) => {
 
   const overlayStyle = {
     position: "absolute",
-    top: "44%",
+    top: "55%",
     left: "50%",
-    width: "50%",
-    height: "37%",
+    right: "50%",
+    width: "100%",
+    height: "100%",
     padding: "25% ",
     transform: "translate(-50%, -50%)",
     textAlign: "center",
@@ -84,7 +85,7 @@ const BestSellerProductCard = ({ index, obj }) => {
                     opacity: hoveredCardIndex === index ? 1 : 0,
                   }}
                 >
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
                     <Space size="middle">
                       <Button
                         ghost
@@ -97,6 +98,7 @@ const BestSellerProductCard = ({ index, obj }) => {
                           margin: "50%",
                           width: "100%",
                           height: "100%",
+                          textAlign: "center",
                         }}
                       ></Button>
                       <Button
@@ -110,6 +112,7 @@ const BestSellerProductCard = ({ index, obj }) => {
                           margin: "50%",
                           width: "100%",
                           height: "100%",
+                          textAlign: "center",
                         }}
                       ></Button>
                     </Space>
@@ -134,7 +137,7 @@ const BestSellerProductCard = ({ index, obj }) => {
                     opacity: hoveredCardIndex === index ? 1 : 0,
                   }}
                 >
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
                     <Space size="middle">
                       <Button
                         ghost
