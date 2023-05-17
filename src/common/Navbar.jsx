@@ -1,6 +1,7 @@
 import { Menu, Space } from "antd";
 import { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
+import "../App.css";
 
 const NavBar = () => {
   const [current, setCurrent] = useState("home");
@@ -55,11 +56,7 @@ const NavBar = () => {
   return (
     <Container>
       <Row align="center">
-        <Col
-          span={6}
-          offset={6}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        <Col span={6} offset={6}>
           <div className="logo">
             <h1>BOUNCER</h1>
           </div>
@@ -90,7 +87,8 @@ function MegaMenu() {
     setSelectedKeys([item.key]);
   };
   return (
-    <div
+    <Row
+      className="mega-menu"
       style={{
         backgroundColor: "white",
         padding: "40px",
@@ -100,152 +98,160 @@ function MegaMenu() {
       }}
     >
       <Space direction="horizontal">
-        <Menu
-          onClick={onMenuItemClick}
-          selectedKeys={selectedKeys}
-          items={[
-            {
-              type: "group",
-              label: "Category",
-              key: "category",
-              children: [
-                {
-                  label: "AirPort & Wireless",
-                  key: "air",
-                },
-                {
-                  label: "AppleCare",
-                  key: "applecare",
-                },
-                {
-                  label: "Bags, Shells & Sleeves",
-                  key: "bags",
-                },
-                {
-                  label: "Business & Security",
-                  key: "business",
-                },
-                {
-                  label: "Cables & Docks",
-                  key: "cables",
-                },
-              ],
-            },
-          ]}
-          style={{ box: "none", border: "none" }}
-        ></Menu>
-        <Menu
-          onClick={onMenuItemClick}
-          selectedKeys={selectedKeys}
-          items={[
-            {
-              type: "group",
-              label: "",
-              key: "",
-              children: [
-                {
-                  label: " Cameras & Video",
-                  key: "Cameras",
-                },
-                {
-                  label: "Car & Travel",
-                  key: "Car",
-                },
-                {
-                  label: "Cases & Films",
-                  key: "Cases",
-                },
-              ],
-            },
-          ]}
-          style={{ box: "none", border: "none", marginBottom: "60%" }}
-        ></Menu>
-        <Menu
-          onClick={onMenuItemClick}
-          selectedKeys={selectedKeys}
-          items={[
-            {
-              type: "group",
-              label: "Category",
-              key: "category",
-              children: [
-                {
-                  label: "Charging Devices",
-                  key: "Charging",
-                },
-                {
-                  label: "Connected Home",
-                  key: "Connected",
-                },
-                {
-                  label: "Device Care",
-                  key: "Device",
-                },
-                {
-                  label: "Display & Graphic",
-                  key: "Display",
-                },
-                {
-                  label: "Fitness & Sport",
-                  key: "Fitness",
-                },
-              ],
-            },
-          ]}
-          style={{ box: "none", border: "none" }}
-        ></Menu>
-
-        <Menu
-          onClick={onMenuItemClick}
-          selectedKeys={selectedKeys}
-          items={[
-            {
-              type: "group",
-              label: "",
-              key: "",
-              children: [
-                {
-                  label: "Headphones",
-                  key: "Headphones",
-                },
-                {
-                  label: "HealhKit",
-                  key: "HealhKit",
-                },
-              ],
-            },
-          ]}
-          style={{ box: "none", border: "none", marginBottom: "70%" }}
-        ></Menu>
-
-        <Menu
-          onClick={onMenuItemClick}
-          selectedKeys={selectedKeys}
-          items={[
-            {
-              type: "group",
-              label: "Category",
-              key: "category",
-              children: [
-                {
-                  label: "Mice & Keyboards",
-                  key: "Mice",
-                },
-                {
-                  label: "Music Creation",
-                  key: "Music",
-                },
-                {
-                  label: "Networking & Server",
-                  key: "Networking",
-                },
-              ],
-            },
-          ]}
-          style={{ box: "none", border: "none", marginBottom: "60%" }}
-        ></Menu>
+        <Col xs={24} xl={3}>
+          <Menu
+            onClick={onMenuItemClick}
+            selectedKeys={selectedKeys}
+            items={[
+              {
+                type: "group",
+                label: "Category",
+                key: "category",
+                children: [
+                  {
+                    label: "AirPort & Wireless",
+                    key: "air",
+                  },
+                  {
+                    label: "AppleCare",
+                    key: "applecare",
+                  },
+                  {
+                    label: "Bags, Shells & Sleeves",
+                    key: "bags",
+                  },
+                  {
+                    label: "Business & Security",
+                    key: "business",
+                  },
+                  {
+                    label: "Cables & Docks",
+                    key: "cables",
+                  },
+                ],
+              },
+            ]}
+            style={{ box: "none", border: "none" }}
+          />
+        </Col>
+        <Col xs={24} xl={3}>
+          <Menu
+            onClick={onMenuItemClick}
+            selectedKeys={selectedKeys}
+            items={[
+              {
+                type: "group",
+                label: "",
+                key: "",
+                children: [
+                  {
+                    label: " Cameras & Video",
+                    key: "Cameras",
+                  },
+                  {
+                    label: "Car & Travel",
+                    key: "Car",
+                  },
+                  {
+                    label: "Cases & Films",
+                    key: "Cases",
+                  },
+                ],
+              },
+            ]}
+            style={{ box: "none", border: "none", marginBottom: "60%" }}
+          />
+        </Col>
+        <Col xs={24} xl={3}>
+          <Menu
+            onClick={onMenuItemClick}
+            selectedKeys={selectedKeys}
+            items={[
+              {
+                type: "group",
+                label: "Category",
+                key: "category",
+                children: [
+                  {
+                    label: "Charging Devices",
+                    key: "Charging",
+                  },
+                  {
+                    label: "Connected Home",
+                    key: "Connected",
+                  },
+                  {
+                    label: "Device Care",
+                    key: "Device",
+                  },
+                  {
+                    label: "Display & Graphic",
+                    key: "Display",
+                  },
+                  {
+                    label: "Fitness & Sport",
+                    key: "Fitness",
+                  },
+                ],
+              },
+            ]}
+            style={{ box: "none", border: "none" }}
+          />
+        </Col>
+        <Col xs={24} xl={3}>
+          <Menu
+            onClick={onMenuItemClick}
+            selectedKeys={selectedKeys}
+            items={[
+              {
+                type: "group",
+                label: "",
+                key: "",
+                children: [
+                  {
+                    label: "Headphones",
+                    key: "Headphones",
+                  },
+                  {
+                    label: "HealhKit",
+                    key: "HealhKit",
+                  },
+                ],
+              },
+            ]}
+            style={{ box: "none", border: "none", marginBottom: "70%" }}
+          />
+        </Col>
+        <Col xs={24} xl={3}>
+          <Menu
+            onClick={onMenuItemClick}
+            selectedKeys={selectedKeys}
+            items={[
+              {
+                type: "group",
+                label: "Category",
+                key: "category",
+                children: [
+                  {
+                    label: "Mice & Keyboards",
+                    key: "Mice",
+                  },
+                  {
+                    label: "Music Creation",
+                    key: "Music",
+                  },
+                  {
+                    label: "Networking & Server",
+                    key: "Networking",
+                  },
+                ],
+              },
+            ]}
+            style={{ box: "none", border: "none", marginBottom: "60%" }}
+          />
+        </Col>
       </Space>
-    </div>
+    </Row>
   );
 }
 

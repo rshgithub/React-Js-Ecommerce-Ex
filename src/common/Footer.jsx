@@ -29,7 +29,10 @@ const Footer = () => {
           </div>
           <Space>
             <IconFont type="icon-facebook" style={{ color: "#385C8E" }} />
-            <IconFont type="icon-twitter" style={{ color: "#03A9F4" }} />
+            <IconFont
+              type="icon-twitter"
+              style={{ color: "#03A9F4", paddingLeft: "30px" }}
+            />
           </Space>
         </Col>
         <Col xs={24} xl={6}>
@@ -101,14 +104,16 @@ const Footer = () => {
         </Col>
       </Row>
       <Divider orientation="left"></Divider>
-      <div className="bottom-bar">
-        <div className="bottom-bar-content">
+      <Row className="bottom-bar">
+        <Col Col xs={24} xl={6} className="bottom-bar-content">
           <span className="text">
             © 2018 Ecommerce theme by www.bisenbaev.com
           </span>
+        </Col>
+        <Col Col xs={24} xl={6} className="bottom-bar-content">
           <Image preview={false} src={Payment} />
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   );
 };

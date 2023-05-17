@@ -14,10 +14,18 @@ const CategoryNavbar = () => (
       style={centerStyle}
       items={[
         {
-          title: <a href="Home">Home</a>,
+          title: (
+            <a style={{ color: " #0275d8" }} href="Home">
+              Home
+            </a>
+          ),
         },
         {
-          title: <a href="ACCESORIES">ACCESORIES</a>,
+          title: (
+            <a style={{ color: " #0275d8" }} href="ACCESORIES">
+              ACCESORIES
+            </a>
+          ),
         },
         {
           title: (

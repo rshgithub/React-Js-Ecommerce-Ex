@@ -9,7 +9,7 @@ export class Gridview extends Component {
       <>
         <div
           style={{
-            marginTop: "1rem",
+            marginTop: "2rem",
             marginBottom: "1rem",
             backgroundColor: "rgb(250,250,251)",
           }}

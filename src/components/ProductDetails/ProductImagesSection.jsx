@@ -17,7 +17,7 @@ const ProductImagesSection = () => {
   };
 
   return (
-    <div style={{ marginBottom: 100 }}>
+    <div style={{ marginBottom: 100 }} >
 
         <Image
           style={{ objectFit: "cover" }}

@@ -1,23 +1,31 @@
 import React from "react";
 import Iphone from "../../assets/MaskGroup1.png";
 import Banner from "../../assets/Banners.png";
+import "../../App.css";
 import { Image } from "antd";
 
 const ImageSlider = () => {
   return (
     <>
-      <div
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(255,0,0), rgba(213,83,151),rgba(153,98,240))",
-        }}
-      >
+      <div className="carousel">
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="item active">
               <img src={Iphone} style={{ width: "50%" }} />
               <div className="carousel-caption">
-                <h3>iPhone X</h3>
+                <h1>iPhone X</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+                  lobortis consequat eu, quam etiam at quis ut convallis.
+                </p>
+                <a>MORE</a>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={Iphone} style={{ width: "50%" }} />
+              <div className="carousel-caption">
+                <h1>iPhone X</h1>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                   lobortis consequat eu, quam etiam at quis ut convallis.
@@ -38,28 +46,7 @@ const ImageSlider = () => {
             <div className="item">
               <img src={Iphone} style={{ width: "50%" }} />
               <div className="carousel-caption">
-                <h3>iPhone X</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                  lobortis consequat eu, quam etiam at quis ut convallis.
-                </p>
-                <a
-                  href="#"
-                  style={{
-                    color: "white",
-                    fontWeight: "bold",
-                    borderBottom: "3px solid white",
-                  }}
-                >
-                  MORE
-                </a>
-              </div>
-            </div>
-
-            <div className="item">
-              <img src={Iphone} style={{ width: "50%" }} />
-              <div className="carousel-caption">
-                <h3>iPhone X</h3>
+                <h1>iPhone X</h1>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
                   lobortis consequat eu, quam etiam at quis ut convallis.
@@ -96,16 +83,7 @@ const ImageSlider = () => {
           </a>
         </div>
       </div>
-      <div
-        style={{
-          top: "108%",
-          display: "flex",
-          justifyContent: "center",
-          position: "absolute",
-          left: "15%",
-          right: "15%",
-        }}
-      >
+      <div className="slider">
         <Image src={Banner} preview={false} height="300px" />
       </div>
     </>

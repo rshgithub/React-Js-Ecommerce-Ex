@@ -1,9 +1,11 @@
 import { Button, Card, Menu, Slider, Row, Col } from "antd";
 import React from "react";
 import ThemeToggler from "./ThemeToggler";
+import "../../App.css";
+
 function CenterSidbarSection() {
   return (
-    <Row>
+    <Row className="side-bar">
       <Col span={12} offset={6}>
         <Card
           title="ACCESORIES"
