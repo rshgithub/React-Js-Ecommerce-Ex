@@ -1,11 +1,14 @@
 import { Breadcrumb } from "antd";
 const centerStyle = {
-  margin: 50,
+  marginTop: 10,
+  marginBottom: 40,
   padding: 10,
   position: "relative",
   display: "flex",
   justifyContent: "center",
   backgroundColor: "#F6F7F8",
+  fontWeight: '500'
+
 };
 
 const CategoryNavbar = () => (
@@ -15,21 +18,21 @@ const CategoryNavbar = () => (
       items={[
         {
           title: (
-            <a style={{ color: " #0275d8" }} href="Home">
+            <a style={{ color: " #009fe1" }} href="Home">
               Home
             </a>
           ),
         },
         {
           title: (
-            <a style={{ color: " #0275d8" }} href="ACCESORIES">
+            <a style={{ color: " #009fe1" }} href="ACCESORIES">
               ACCESORIES
             </a>
           ),
         },
         {
           title: (
-            <a href="Beat Solo2 on Ear Headphones - Black">
+            <a style={{ color: " black" }} href="Beat Solo2 on Ear Headphones - Black">
               Beat Solo2 on Ear Headphones - Black
             </a>
           ),

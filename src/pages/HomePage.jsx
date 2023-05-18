@@ -12,7 +12,7 @@ import { AdsSection } from "../common";
 
 const HomePage = () => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <>
       <ImageSlider />
       <BestSellerSection />
       <AdsSection />
@@ -20,7 +20,7 @@ const HomePage = () => {
       <LatestNewsCard />
       <FeaturedProductCard />
       <SearchBar />
-    </div>
+    </>
   );
 };
 

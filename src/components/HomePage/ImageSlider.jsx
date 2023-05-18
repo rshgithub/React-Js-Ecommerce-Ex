@@ -11,32 +11,30 @@ const ImageSlider = () => {
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="item active">
-              <img src={Iphone} style={{ width: "50%" }} />
+              <img src={Iphone}/>
               <div className="carousel-caption">
                 <h1>iPhone X</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                  lobortis consequat eu, quam etiam at quis ut convallis.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy.
                 </p>
-                <a>MORE</a>
+                <a href="#">MORE</a>
               </div>
             </div>
 
             <div className="item">
-              <img src={Iphone} style={{ width: "50%" }} />
+              <img src={Iphone}/>
               <div className="carousel-caption">
                 <h1>iPhone X</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                  lobortis consequat eu, quam etiam at quis ut convallis.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy.
                 </p>
                 <a
                   href="#"
-                  style={{
-                    color: "white",
-                    fontWeight: "bold",
-                    borderBottom: "3px solid white",
-                  }}
+            
                 >
                   MORE
                 </a>
@@ -44,20 +42,17 @@ const ImageSlider = () => {
             </div>
 
             <div className="item">
-              <img src={Iphone} style={{ width: "50%" }} />
+              <img src={Iphone}/>
               <div className="carousel-caption">
                 <h1>iPhone X</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                  lobortis consequat eu, quam etiam at quis ut convallis.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy.
                 </p>
                 <a
                   href="#"
-                  style={{
-                    color: "white",
-                    fontWeight: "bold",
-                    borderBottom: "3px solid white",
-                  }}
+          
                 >
                   MORE
                 </a>
@@ -84,7 +79,7 @@ const ImageSlider = () => {
         </div>
       </div>
       <div className="slider">
-        <Image src={Banner} preview={false} height="300px" />
+        <Image src={Banner} preview={false} />
       </div>
     </>
   );

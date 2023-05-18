@@ -1,14 +1,166 @@
-.logo {
-  color: rgba(250, 2, 2, 0.8);
+body {
+  margin: 0;
+  padding: 0;
+  font: 300 14px/18px Roboto;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+  display: block;
+}
+
+/* NavBar*/
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a,
+a:hover,
+a.active,
+a:active,
+a:visited,
+a:focus {
+  color: #fefefe;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.5rem;
+}
+.content {
+  margin: 10px 100px 0px 100px;
+}
+
+.exo-menu {
+  width: 100%;
+  float:left;
+  list-style: none;
+  position: relative;
+  background: #fff;
+}
+.exo-menu > li {
+  display: inline-block;
+}
+.exo-menu > li > a {
+  color: black;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s linear, background 0.2s linear;
+  -moz-transition: color 0.2s linear, background 0.2s linear;
+  -o-transition: color 0.2s linear, background 0.2s linear;
+  transition: color 0.2s linear, background 0.2s linear;
+}
+.exo-menu > li > a.active,
+.exo-menu > li > a:hover,
+li.drop-down ul > li > a:hover {
+  color: #009fe1;
+}
+
+li.drop-down {
+  position: relative;
+}
+li.drop-down:before {
+  content: "\f103";
+  color: #fff;
+  font-family: FontAwesome;
+  font-style: normal;
+  display: inline;
+  position: absolute;
+  right: 6px;
+  top: 20px;
+  font-size: 14px;
+}
+li.drop-down > ul {
+  left: 0px;
+  min-width: 230px;
+}
+.drop-down-ul {
+  display: none;
+}
+
+li.drop-down > ul > li > a {
+  color: #fff;
+  display: block;
+  padding: 20px 22px;
+  text-decoration: none;
+  background-color: #365670;
+  border-bottom: 1px dotted #547787;
+  -webkit-transition: color 0.2s linear, background 0.2s linear;
+  -moz-transition: color 0.2s linear, background 0.2s linear;
+  -o-transition: color 0.2s linear, background 0.2s linear;
+  transition: color 0.2s linear, background 0.2s linear;
+}
+
+/*mega menu*/
+
+.mega-menu {
+  left: 0;
+  right: 0;
+  padding: 15px;
+  display: none;
+  padding-top: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 10;
+}
+h4.row.mega-title {
+  color: #ccc;
+  margin-top: 0px;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-bottom: 13px;
+  text-transform: uppercase;
+  padding-top: 15px;
+  background-color: #fff;
+}
+.mega-menu ul li a {
+  line-height: 25px;
+  font-size: 90%;
+  display: block;
+  color: #171717;
+}
+ul.stander li a {
+  padding: 3px 0px;
+}
+
+ul.description li {
+  padding-bottom: 12px;
+  line-height: 8px;
+}
+
+/*common*/
+.mega-menu {
+  background-color: #fff;
+}
+
+/*hover*/
+.Blog:hover,
+.Images:hover,
+.mega-menu:hover,
+.drop-down-ul:hover,
+li.drop-down > a:hover + .drop-down-ul,
+.images-drop-down > a:hover + .Images,
+.mega-drop-down a:hover + .mega-menu,
+li.flyout-mega > a:hover {
+  display: block;
 }
 
 /* carousel */
 
 .carousel {
   width: 100%;
+  height: 600px;
   position: relative;
   background-image: linear-gradient(
     to right,
@@ -16,6 +168,7 @@
     rgba(213, 83, 151),
     rgba(153, 98, 240)
   );
+  margin-top: 10px;
 }
 .carousel-inner {
   position: relative;
@@ -28,8 +181,9 @@
 .carousel-inner > .item > a > img,
 .carousel-inner > .item > img {
   line-height: 1;
-  display: flex;
-  justify-content: right;
+  float: right;
+  width: 50%;
+  height: 600px;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
@@ -204,49 +358,38 @@
   content: "\203a";
 }
 
-/* .carousel-caption {
-  position: absolute;
-  top:30%;
-  right: 15%;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: left;
-  align-items: start;
-} */
-
 .carousel .carousel-caption {
-  position: absolute;
-  top: 30%;
-  right: 15%;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  position: relative;
+  right: 30%;
+  margin-top: 10%;
   color: #fff;
+  display: flex;
   justify-content: left;
   align-items: start;
   flex-direction: column;
+  width: 170px;
+  height: 100px;
+  float: left;
 }
 
 .carousel .carousel-caption h1 {
   color: white;
+  font-weight: bold;
   font-size: 40px;
-  font-weight: lighter;
 }
 
 .carousel .carousel-caption p {
   color: white;
-  font-size: 19px;
   text-align: left;
+  margin-top: 30%;
+  inline-size: 330px;
 }
 
 .carousel .carousel-caption a {
   color: white;
   font-weight: bold;
   text-decoration: 3px underline;
+  margin-top: 30%;
 }
 
 @media screen and (min-width: 768px) {
@@ -266,11 +409,6 @@
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
     margin-right: -10px;
-  }
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
   }
 }
 
@@ -298,6 +436,7 @@
 .title {
   margin-bottom: 20px;
   font-size: 20px;
+  font-weight: bolder;
 }
 .super-text {
   color: #22262a;
@@ -336,7 +475,7 @@
 
 /*Image Slider*/
 .slider {
-  top: 111%;
+  top: 105%;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -644,23 +783,126 @@ input[type="radio"]#Pink {
   }
 }
 
-/* NavBar */
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .mega-menu {
-    width: 100%;
-    height: auto;
+/*responsive*/
+@media (min-width: 767px) {
+  .exo-menu > li > a {
+    display: block;
+    padding: 20px 22px;
   }
+  .mega-menu,
+  .Images,
+  li.drop-down > ul {
+    position: absolute;
+  }
+  .flyout-right > ul {
+    left: 100%;
+  }
+  .flyout-left > ul {
+    right: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .exo-menu {
+    min-height: 58px;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .exo-menu > li > a {
+    width: 100%;
+    display: none;
+  }
+  .exo-menu > li {
+    width: 100%;
+  }
+  .display.exo-menu > li > a {
+    display: block;
+    padding: 20px 22px;
+  }
+
+  .mega-menu,
+  .Images,
+  .Blog,
+  li.drop-down > ul {
+    position: relative;
+  }
+}
+a.toggle-menu {
+  position: absolute;
+  right: 0px;
+  padding: 20px;
+  font-size: 27px;
+  background-color: #ccc;
+  color: #fff;
+  top: 0px;
 }
 
 /*Image Slider*/
 @media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0),
+      rgba(213, 83, 151),
+      rgba(153, 98, 240)
+    );
+    margin-top: 10px;
+  }
+  .carousel-inner > .item > a > img,
+  .carousel-inner > .item > img {
+    line-height: 1;
+    float: right;
+    width: 70%;
+    height: 400px;
+  }
+
+  .carousel .carousel-caption {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    inset-block: 10px 50px;
+  }
+
+  .carousel .carousel-caption h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10%;
+  }
+
+  .carousel .carousel-caption p {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 10%;
+    padding-right: 100%;
+    inline-size: 330px;
+  }
+
+  .carousel .carousel-caption a {
+    color: white;
+    font-weight: bold;
+    text-decoration: 3px underline;
+    margin-top: 10%;
+  }
   .slider {
-    top: 50%;
+    top: 105%;
     width: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: relative;
+    inset-block: 105% 50px;
     left: 1%;
   }
 }

@@ -1,258 +1,140 @@
 import { Menu, Space } from "antd";
-import { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
+import React from "react";
+import { Container } from "reactstrap";
 import "../App.css";
 
 const NavBar = () => {
-  const [current, setCurrent] = useState("home");
-  const onClick = (e) => {
-    console.log("click ", e);
-    setCurrent(e.key);
-  };
-  const centerStyle = {
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-  };
-
-  const items = [
-    {
-      label: "HOME",
-      key: "home",
-      children: [
-        {
-          label: <MegaMenu />,
-          key: "megamenu",
-          style: {
-            height: "fit-content",
-            padding: "0",
-            backgroundColor: "white",
-          },
-        },
-      ],
-    },
-    {
-      label: "STORE",
-      key: "store",
-    },
-    {
-      label: "IPHONE",
-      key: "iphone",
-    },
-    {
-      label: "IPAD",
-      key: "ipad",
-    },
-    {
-      label: "MACBOOK",
-      key: "macbook",
-    },
-    {
-      label: "ACCESORIES",
-      key: "accesories",
-    },
-  ];
-
   return (
     <Container>
-      <Row align="center">
-        <Col span={6} offset={6}>
-          <div className="logo">
-            <h1>BOUNCER</h1>
-          </div>
-        </Col>
-      </Row>
-      <Row align="center">
-        <Col
-          span={12}
-          offset={6}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <Menu
-            style={centerStyle}
-            onClick={onClick}
-            selectedKeys={[current]}
-            mode="horizontal"
-            items={items}
-          ></Menu>
-        </Col>
-      </Row>
+      <div
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          textDecoration: "none",
+        }}
+      >
+        <h1 style={{ color: "red" }}>BOUNCER</h1>
+      </div>
+
+      <div className="content">
+        <ul className="exo-menu">
+          <li className="mega-drop-down">
+            <a className="active" href="#">
+              HOME
+            </a>
+            <div className="mega-menu">
+              <div className="mega-menu-wrap">
+                <div className="row">
+                  <div className="col-md-3">
+                    <h4 className="row mega-title">Category</h4>
+                    <ul className="stander">
+                      <li>
+                        <a href="#">AirPort & Wireless</a>
+                      </li>
+                      <li>
+                        <a href="#">AppleCare</a>
+                      </li>
+                      <li>
+                        <a href="#">Bags, Shells & Sleeves</a>
+                      </li>
+                      <li>
+                        <a href="#">Business & Security</a>
+                      </li>
+                      <li>
+                        <a href="#">Cables & Docks</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-2">
+                    <h4 className="row mega-title" style={{ color: "#fff" }}>
+                      Category
+                    </h4>
+                    <ul className="stander">
+                      <li>
+                        <a href="#">Cameras & Video</a>
+                      </li>
+                      <li>
+                        <a href="#">Car & Travel</a>
+                      </li>
+                      <li>
+                        <a href="#">Cases & Films</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-2">
+                    <h4 className="row mega-title">Category</h4>
+                    <ul className="description">
+                      <li>
+                        <a href="#">Charging Devices</a>
+                      </li>
+                      <li>
+                        <a href="#">Connected Home</a>
+                      </li>
+                      <li>
+                        <a href="#">Device Care</a>
+                      </li>
+                      <li>
+                        <a href="#">Display & Graphic</a>
+                      </li>
+                      <li>
+                        <a href="#">Fitness & Sport</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-2">
+                    <h4 className="row mega-title" style={{ color: "#fff" }}>
+                      Category
+                    </h4>
+                    <ul className="icon-des">
+                      <li>
+                        <a href="#">Headphones</a>
+                      </li>
+                      <li>
+                        <a href="#">HealhKit</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-3">
+                    <h4 className="row mega-title">Category</h4>
+                    <ul className="description">
+                      <li>
+                        <a href="#">Mice & Keyboards</a>
+                      </li>
+                      <li>
+                        <a href="#">Music Creation</a>
+                      </li>
+                      <li>
+                        <a href="#">Networking & Server</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">STORE</a>
+          </li>
+          <li>
+            <a href="#">IPHONE</a>
+          </li>
+          <li>
+            <a href="#">IPAD</a>
+          </li>
+          <li>
+            <a href="#">MACBOOK</a>
+          </li>
+          <li>
+            <a href="#">ACCESORIES</a>
+          </li>
+
+          <a href="#" className="toggle-menu visible-xs-block">
+            <i class=" fa fa-bars"></i>
+          </a>
+        </ul>
+      </div>
     </Container>
   );
 };
-
-function MegaMenu() {
-  const [selectedKeys, setSelectedKeys] = useState([]);
-  const onMenuItemClick = (item) => {
-    setSelectedKeys([item.key]);
-  };
-  return (
-    <Row
-      className="mega-menu"
-      style={{
-        backgroundColor: "white",
-        padding: "40px",
-        display: "flex",
-        justifyContent: "center",
-        justifyItems: "center",
-      }}
-    >
-      <Space direction="horizontal">
-        <Col xs={24} xl={3}>
-          <Menu
-            onClick={onMenuItemClick}
-            selectedKeys={selectedKeys}
-            items={[
-              {
-                type: "group",
-                label: "Category",
-                key: "category",
-                children: [
-                  {
-                    label: "AirPort & Wireless",
-                    key: "air",
-                  },
-                  {
-                    label: "AppleCare",
-                    key: "applecare",
-                  },
-                  {
-                    label: "Bags, Shells & Sleeves",
-                    key: "bags",
-                  },
-                  {
-                    label: "Business & Security",
-                    key: "business",
-                  },
-                  {
-                    label: "Cables & Docks",
-                    key: "cables",
-                  },
-                ],
-              },
-            ]}
-            style={{ box: "none", border: "none" }}
-          />
-        </Col>
-        <Col xs={24} xl={3}>
-          <Menu
-            onClick={onMenuItemClick}
-            selectedKeys={selectedKeys}
-            items={[
-              {
-                type: "group",
-                label: "",
-                key: "",
-                children: [
-                  {
-                    label: " Cameras & Video",
-                    key: "Cameras",
-                  },
-                  {
-                    label: "Car & Travel",
-                    key: "Car",
-                  },
-                  {
-                    label: "Cases & Films",
-                    key: "Cases",
-                  },
-                ],
-              },
-            ]}
-            style={{ box: "none", border: "none", marginBottom: "60%" }}
-          />
-        </Col>
-        <Col xs={24} xl={3}>
-          <Menu
-            onClick={onMenuItemClick}
-            selectedKeys={selectedKeys}
-            items={[
-              {
-                type: "group",
-                label: "Category",
-                key: "category",
-                children: [
-                  {
-                    label: "Charging Devices",
-                    key: "Charging",
-                  },
-                  {
-                    label: "Connected Home",
-                    key: "Connected",
-                  },
-                  {
-                    label: "Device Care",
-                    key: "Device",
-                  },
-                  {
-                    label: "Display & Graphic",
-                    key: "Display",
-                  },
-                  {
-                    label: "Fitness & Sport",
-                    key: "Fitness",
-                  },
-                ],
-              },
-            ]}
-            style={{ box: "none", border: "none" }}
-          />
-        </Col>
-        <Col xs={24} xl={3}>
-          <Menu
-            onClick={onMenuItemClick}
-            selectedKeys={selectedKeys}
-            items={[
-              {
-                type: "group",
-                label: "",
-                key: "",
-                children: [
-                  {
-                    label: "Headphones",
-                    key: "Headphones",
-                  },
-                  {
-                    label: "HealhKit",
-                    key: "HealhKit",
-                  },
-                ],
-              },
-            ]}
-            style={{ box: "none", border: "none", marginBottom: "70%" }}
-          />
-        </Col>
-        <Col xs={24} xl={3}>
-          <Menu
-            onClick={onMenuItemClick}
-            selectedKeys={selectedKeys}
-            items={[
-              {
-                type: "group",
-                label: "Category",
-                key: "category",
-                children: [
-                  {
-                    label: "Mice & Keyboards",
-                    key: "Mice",
-                  },
-                  {
-                    label: "Music Creation",
-                    key: "Music",
-                  },
-                  {
-                    label: "Networking & Server",
-                    key: "Networking",
-                  },
-                ],
-              },
-            ]}
-            style={{ box: "none", border: "none", marginBottom: "60%" }}
-          />
-        </Col>
-      </Space>
-    </Row>
-  );
-}
 
 export default NavBar;

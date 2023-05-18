@@ -29,7 +29,7 @@ const AdsSection = () => {
           <p style={{ color: "white", fontSize: "clamp(12px, 2vw, 20px)" }}>
             Performance and design. Taken right to the edge.
           </p>
-          <Button className="shop-now-button">SHOP NOW</Button>
+          <a className="shop-now-button">SHOP NOW</a>
         </Col>
         <Col
           xs={{ span: 24 }}
