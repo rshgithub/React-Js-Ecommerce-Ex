@@ -12,18 +12,10 @@ function App() {
         <Route index element={<HomePage />} />
 
         <Route exact path="/productgrid" element={<ProductGrid />} />
-
+        <Route exact path="/productlist" element={<ProductsList />} />
         <Route exact path="/productdetails" element={<ProductDetails />} />
       </Routes>
       <Footer />
-
-      {/* <ProductsList /> 
-     <ProductGrid/>
-      <Header />
-      <Navbar />
-    {<HomePage/>}
-      <ProductsList />
-      <Footer />  */}
     </div>
   );
 }
