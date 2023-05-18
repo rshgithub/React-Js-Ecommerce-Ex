@@ -19,7 +19,7 @@ const AdsSection = () => {
       <h2 style={{ color: "white", fontSize: "clamp(24px, 4vw, 50px)", fontWeight: "lighter" }}>
         iPhone 6 Plus
       </h2>
-      <p style={{ color: "white", fontSize: "clamp(12px, 2vw, 20px)" }}>
+      <p style={{ color: "white", fontSize: "150%" , padding:"5%" }}>
         Performance and design. Taken right to the edge.
       </p>
       <Button className="shop-now-button">SHOP NOW</Button>

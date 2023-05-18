@@ -8,17 +8,16 @@ const BestSellerSection = () => {
   return (
     <div
       style={{
-        marginLeft: 200,
-        marginRight: 200,
-        marginTop: 40,
-        marginBottom: 40,
+        marginLeft: "15%",
+        marginRight: "15%",
+        marginTop: "2%",
+        marginBottom: "2%",
       }}
     >
       <BestSellerNavbar />
 
       <List
-    grid={{ 
-      gutter: 20 ,
+    grid={{  
       column : 4 ,  
       xs: 1,
       sm: 1,
@@ -29,14 +28,17 @@ const BestSellerSection = () => {
     }}
         dataSource={BestSellerProductsList}
         renderItem={(item, index) => (
+          <List.Item>
           <BestSellerProductCard key={index} index={index} obj={item} />
+        </List.Item>
+
         )}
       />
       <Button
         type="link"
         style={{ borderBottom: "2px solid blue", marginTop: 40 }}
       >
-        LOAD MORE{" "}
+        LOAD MORE 
       </Button>
     </div>
   );

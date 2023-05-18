@@ -1,4 +1,4 @@
-import { List , Row , Col} from "antd"; 
+import { Typography, Row, Col } from "antd";
 import { useState } from "react";
 import "../../App.css";
 import { BestSellerProductCard } from "../../common";
@@ -15,14 +15,20 @@ const RelatedProductsSections = () => {
   };
 
   return (
+    <Row justify="center" align="middle" >
+    <Col align="middle" justify="center">
+      <Typography.Title style={{ marginBottom: 20 }} level={3}>RELATED PRODUCTS</Typography.Title>
+      <Row gutter={[16, 16]} >
+        {RelatedProductsList.map((product, index) => (
+          <Col   key={index}>
+            <BestSellerProductCard index={index} obj={product} />
+          </Col>
+        ))}
+      </Row>
+    </Col>
 
-    <Row gutter={[16, 16]}>
-    {RelatedProductsList.map((product, index) => (
-      <Col xs={24} sm={12} md={8} lg={6} key={index}>
-        <BestSellerProductCard index={index} obj={product} />
-      </Col>
-    ))}
-  </Row>
+    </Row>
+
     // <div
     //   style={{
     //     marginTop: 50,
@@ -35,7 +41,7 @@ const RelatedProductsSections = () => {
     // >
     //   <h1 style={{ fontWeight: "normal" }}>RELATED PRODUCTS</h1>
     //   <List
-      
+
     //   // grid={{
     //   //   gutter: 16,
     //   //   xs: 1,

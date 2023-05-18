@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Row, Col, Divider, Space } from "antd";
+import { Button, Row, Col, Divider, Space, Typography } from "antd";
 import {
   FacebookOutlined,
   TwitterOutlined,
@@ -52,41 +52,43 @@ const ProductOptions = ({ product }) => {
     }
   };
 
+  const { Text } = Typography;
+
   return (
-    <div style={{ alignItems: "center", marginTop: 50 }}>
-      <Row gutter={[16, 16]}>
-        <Col Col span={15}>
-          <div style={{ backgroundColor: "#F6F7F8", width: 130 }}>
-            <Space>
+    <Col >
+      <Col style={{ display: "flex" , justifyContent: "space-between" ,marginTop: "5%" ,  marginBottom: "5%" ,  }}>
+        <Col > 
+          <Col style={{ backgroundColor: "#F6F7F8", width: "100%" }}>
+ 
               <Button
                 onClick={handleDecrement}
                 type="link"
-                style={{ fontSize: 23, marginBottom: 20 }}
+                style={{ fontSize: 25, marginBottom: 20 }}
               >
                 -
               </Button>
-              <span style={{ fontSize: 18 }}>{count}</span>
+              <Text  style={{ fontSize: 18 }}>{count}</Text>
               <Button
                 onClick={handleIncrement}
                 type="link"
-                style={{ fontSize: 23, marginBottom: 20 }}
+                style={{ fontSize: 25, marginBottom: 20 }}
               >
                 +
-              </Button>
-            </Space>
-          </div>
+              </Button> 
+          </Col>
         </Col>
-        <Col span={6}>
-          <Space>
-            <Button
+        <Col  style={{ display: "flex"  ,  justifyContent: "space-between" }} > 
+          <Button
               style={{
                 backgroundColor: "rgb(51,160,255,.2)",
-                height: 50,
-                width: 190,
+                height: "auto",
+                width: "100%", 
+                padding : 12,
                 fontSize: 16,
                 color: "#33A0FF",
                 fontWeight: "bold",
-                border: "none",
+                border: "none", 
+                marginRight: "5%",
               }}
               onClick={handleAddToCartClick}
               icon={<ShoppingCartOutlined />}
@@ -96,8 +98,9 @@ const ProductOptions = ({ product }) => {
             <Button
               style={{
                 backgroundColor: "rgb(51,160,255,.2)",
-                height: 50,
-                width: 50,
+                height: "auto",
+                width:  50 , 
+                padding : 12,
                 fontSize: 16,
                 color: "#33A0FF",
                 fontWeight: "bold",
@@ -105,13 +108,12 @@ const ProductOptions = ({ product }) => {
               }}
               onClick={handleFavoriteClick}
               icon={<HeartOutlined />}
-            />
-          </Space>
+            /> 
         </Col>
-      </Row>
-      <Divider />
+      </Col>
+      <Divider style={{ width: "100%" }} />
 
-      <div style={{ display: "flex" }}>
+      <Col style={{ display: "flex" ,  justifyContent: "space-between"}}>
         <Button
           type="primary"
           style={{
@@ -124,7 +126,7 @@ const ProductOptions = ({ product }) => {
           }}
           onClick={handleFacebookShare}
         >
-          <FacebookOutlined style={{ color: "#fff", marginRight: 8 }} />
+          <FacebookOutlined style={{ color: "#fff" }} />
           Share on Facebook
         </Button>
         <Button
@@ -138,12 +140,12 @@ const ProductOptions = ({ product }) => {
           }}
           onClick={handleTwitterShare}
         >
-          <TwitterOutlined style={{ color: "#fff", marginRight: 8 }} />
+          <TwitterOutlined style={{ color: "#fff", fontSize: "1.2rem" }} />{" "}
           Share on Twitter
         </Button>
         <div style={{ marginLeft: 16 }}></div>
-      </div>
-    </div>
+      </Col>
+    </Col>
   );
 };
 

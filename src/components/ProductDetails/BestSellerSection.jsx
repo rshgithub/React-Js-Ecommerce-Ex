@@ -1,14 +1,12 @@
 import React from "react";
-import { Carousel } from "antd";
+import { Carousel , Row , Col } from "antd";
 import { BestSellerProductCard } from "../../common";
 import "../../App.css";
 import BestSellerProductsList from "../../utils/ProductsLists/BestSellerProductsList";
 
-const BestSellerSection = () => { 
- 
-
+const BestSellerSection = () => {
   const carouselCards = BestSellerProductsList.map((item, index) => (
-    <div key={index} >
+    <div key={index}>
       <BestSellerProductCard key={index} index={index} obj={item} />
     </div>
   ));
@@ -17,17 +15,16 @@ const BestSellerSection = () => {
     console.log(currentSlide);
   };
   return ( 
-    <Carousel 
-    autoplay
-    afterChange={onChange} 
-    dotPosition="bottom" 
-      dots={{ className: "carousel-dots" }}
-      style={{ height: "500px", width: "80%" }}
-    >
-      {carouselCards}
-    </Carousel>
+      <Carousel style={{height: 480 , width: 300}}
+        autoplay
+        afterChange={onChange}
+        dotPosition="bottom"
+        dots={{ className: "carousel-dots" }}
+        vertical-align="top"
+      >
+        {carouselCards}
+      </Carousel>
  
-
   );
 };
 

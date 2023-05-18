@@ -17,33 +17,32 @@ const ProductImagesSection = () => {
   };
 
   return (
-    <div style={{ marginBottom: 100 }}>
-
+    <Col>
+      <Col style={{ width: 530, height:  "auto",}}>
         <Image
-          style={{ objectFit: "cover" }}
-          width={520}
-          height={520}
+         style={{ width: "100%",  objectFit: "cover" }}
           preview={false}
           src={productMainImage}
         />
+      </Col>
 
-        <div style={{ marginTop: 15 }}>
-          <Row gutter={[16, 16]}>
-            {productSmallImages.map((imageUrl) => (
-              <Col key={imageUrl}>
-                <Image
-                  width={120}
-                  height={120}
-                  style={{ border: "2px solid #d9d9d9", padding: 5 }}
-                  src={imageUrl}
-                  onClick={() => handleSmallProductImageClick(imageUrl)}
-                  preview={false}
-                />
-              </Col>
-            ))}
-          </Row>
-        </div> 
-    </div>
+      <Row style={{ marginTop: "3%" ,  marginLeft: "2%" }}>
+        <Row gutter={[16, 16]} justify="center" align="middle">
+          {productSmallImages.map((imageUrl) => (
+            <Col sm={6} md={6} lg={6} xl={6}  key={imageUrl}>
+              <Image
+                width={115}
+                height={115}
+                style={{ border: "2px solid #d9d9d9", padding: 5 }}
+                src={imageUrl}
+                onClick={() => handleSmallProductImageClick(imageUrl)}
+                preview={false}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Row>
+    </Col>
   );
 };
 

@@ -2,7 +2,7 @@ const BestSellerProductsList = [
   {
     key: 1,
     title: "Title 1",
-    image: "https://cdn.ttgtmedia.com/rms/onlineimages/hp_elitebook_mobile.jpg",
+    image: "https://cdn.thewirecutter.com/wp-content/media/2022/10/laptopstopicpage-2048px-2029.jpg",
     lastPrice: "55",
     originalPrice: "22",
     ifNew: true,

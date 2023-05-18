@@ -1,42 +1,68 @@
 import React from "react";
-import { Rate, Card, List, Avatar, Space } from "antd";
+import { Rate, Card, Row, Avatar, Col } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import ProductReviewsList from "../../utils/ProductsLists/ProductReviewsList";
 
 const ProductReviewsCard = () => {
- 
   const { Meta } = Card;
 
   return (
-    <div>
-      <div style={{ height: 500, overflowY: "scroll" , }}>
-        {ProductReviewsList.map((review) => (
-          <Card
-            key={review.id}
-            style={{ height: 150, width: 1000, margin: 5 , textAlign: "start" }}
-          >
-            <Meta
-              title={
-                <p class="centered" >
-                   <Space size="large">
-                    <Avatar src={review.avatar} icon={<UserOutlined />} />
-                    {review.username}
-                    {review.date}
-                    <Rate
-                    style={{ fontSize: 12 , textAlign: "center"}}
-                    allowClear={false}
-                    allowHalf
-                    disabled
-                    value={review.rating}
+    <div style={{ height: "60vh" }}>
+      {ProductReviewsList.map((review) => (
+        <Card
+          key={review.id}
+          style={{
+            width: "90%",
+            marginBottom: " 10px ",
+            textAlign: "start",
+            "@media (min-width: 768px)": {
+              width: "50%",
+            },
+          }}
+        >
+          <Meta
+            title={
+              <Row align="middle">
+                <Col flex="0 0 auto">
+                  <Avatar
+                    src={review.avatar}
+                    icon={<UserOutlined />} 
                   />
-                  </Space>
-                </p>
-              } 
-            /> 
-            <p style={{ marginTop: 10 }}>{review.review}</p>
-          </Card>
-        ))}
-      </div>
+                </Col>
+                <Col flex="auto">
+                  <p
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "clamp(12px, 1.5vw, 15px)",
+                    }}
+                  >
+                    <span style={{ marginLeft: "10px", flex: 1 }}>
+                      {review.username}
+                    </span>
+                    <span style={{ marginRight: "10px" }}>{review.date}</span>
+                    <Rate
+                      style={{
+                        fontSize: "clamp(12px, 2vw, 15px)",
+                        marginLeft: "5",
+                      }}
+                      allowClear={false}
+                      allowHalf
+                      disabled
+                      value={review.rating}
+                    />
+                  </p>
+                </Col>
+              </Row>
+            }
+          />
+
+          <p style={{
+                        fontSize: "clamp(12px, 2vw, 15px)",
+                        marginLeft: "5",
+                       marginTop: "10 auto" }}>{review.review}</p>
+        </Card>
+      ))}
     </div>
   );
 };

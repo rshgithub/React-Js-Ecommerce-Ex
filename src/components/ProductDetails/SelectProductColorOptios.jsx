@@ -27,7 +27,8 @@ const SelectProductColorOptios = () => {
             backgroundColor: option.color,
             width: 20,
             height: 20,
-            borderRadius: "50%",
+            boxSizing: "none",
+            borderRadius: "50%", 
           }}
         />
       </div>
@@ -38,7 +39,7 @@ const SelectProductColorOptios = () => {
     <Radio.Group
       value={selectedColor}
       onChange={handleColorChange}
-      style={{ display: "flex", flexDirection: "row" , marginTop: 10}}
+      style={{  flexDirection: "row"  }}
     >
       {colorRadioButtons}
     </Radio.Group>

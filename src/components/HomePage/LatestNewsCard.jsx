@@ -29,7 +29,7 @@ const LatestNewsCard = () => {
                 <Card.Meta 
                   description={
                     <Row>
-                      <Col style={{ marginLeft: "5%" }} xs={20} sm={12}>
+                      <Col style={{ marginLeft: "5%" }} xs={8} sm={10}>
 
                         <Paragraph style={{ fontSize: "14px" }}>
                           <h5 style={{ color: "#C1C8CE", fontSize: "13px" }}>
@@ -39,7 +39,7 @@ const LatestNewsCard = () => {
                           {item.title}
                         </Title>
                         </Paragraph>
-                        <Paragraph style={{ fontSize: "14px" }}>
+                        <Paragraph style={{ fontSize: "0.8rem" }}>
                           {item.desc}
                         </Paragraph>
                       </Col>

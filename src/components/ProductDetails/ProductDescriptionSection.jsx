@@ -18,27 +18,28 @@ const ProductDescriptionSection = (props) => {
     <Tabs
       style={{
         width: "95%",
-        height: 360,
+        height: 400,
         backgroundColor: "#FAFAFB",
-        padding: 10, 
-        margin: 30, 
+        padding: "2%", 
+        marginTop: "4%", 
       }}
       defaultActiveKey="1"
       activeKey={activeTab}
       onChange={handleTabChange}
     >
-      <TabPane
-        style={{
-          maxHeight: 300,
-          fontSize: 15,
-          padding: 10,
-          textAlign: "start", 
-        }}
-        tab="Product Description"
-        key="1"
-      >
-        {product.description}
-      </TabPane>
+<TabPane
+  style={{
+    maxHeight: 300,
+    fontSize: 'clamp(12px, 1.5vw, 15px)',
+    padding: '1rem',
+    textAlign: 'start',
+    overflow: 'auto',
+  }}
+  tab="Product Description"
+  key="1"
+>
+  {product.description}
+</TabPane>
       <TabPane
         key="2"
         style={{ maxHeight: 300, overflowY: "scroll" }}

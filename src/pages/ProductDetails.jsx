@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col } from "antd";
 import { CategoryNavbar } from "../common";
-import "../App.css"; 
+import "../App.css";
 
 import {
   BestSellerSection,
@@ -45,29 +45,28 @@ const ProductDetails = () => {
   };
 
   return (
-    <div
-      style={{
-        paddingLeft: 50,
-        paddingRight: 50,
-        paddingTop: 20,
+    <Col
+      style={{ 
+        padding : "5%",
+       
       }}
     >
       <CategoryNavbar />
-      <Row>
-        <Col span={18}>
-          <Row gutter={[60, 60]}>
+      <Row >
+        <Col xs={24} lg={18}>
+          <Row gutter={[16, 16]}     >
             <Col>
               <ProductImagesSection className="productImagesPart" />
             </Col>
 
-            <Col className="ProductDetails" span={14}>
+            <Col className="ProductDetails" >
               <ProductDetailsSection product={product} />
             </Col>
           </Row>
           <ProductDescriptionSection product={product} />
         </Col>
-
-        <Col className="adsPart" span={6}>
+ 
+        <Col className="adsPart"   xs={24} sm={12} md={10} lg={6} xl={6} xxl={6} >
           <h1
             style={{
               color: "lightGrey",
@@ -83,7 +82,7 @@ const ProductDetails = () => {
       </Row>
 
       <RelatedProductsSections />
-    </div>
+    </Col>
   );
 };
 

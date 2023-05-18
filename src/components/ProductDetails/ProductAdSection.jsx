@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "antd";
+import { Image , Col} from "antd";
 
 const product = {
   id: 1,
@@ -12,28 +12,28 @@ const product = {
 
 const ProductAdSection = () => {
   return (
-    <div
-      style={{
-        width: 270,
-        height: 380,
-        backgroundColor: "lightGrey",
-        padding: 20,   
-        marginTop : 40 ,
-      }}
-    >
-      <h1  style={{
-          textAlign: "left",
-        }}>{product.name}</h1>
-      <p
-        style={{
-          textAlign: "left",
-        }}
-      >
-        {product.description}
-      </p>
-      <h2 style={{ fontSize: 30, textAlign: "left" , fontWeight: "normal" , fontColor: "#707070" }}>{product.lastPrice}</h2>
-      <Image width={200} src={product.image} />
-    </div>
+<Col
+  style={{ 
+    maxWidth: 300,
+    height: "auto",
+    backgroundColor: "lightGrey",
+    padding: "20px",   
+    marginTop : 10 ,
+    textAlign: "left",
+  }}
+>
+  <h1>{product.name}</h1>
+  <p>{product.description}</p>
+  <h2 style={{ fontSize: "2rem", fontWeight: "normal", color: "#707070" }}>
+    {product.lastPrice}
+  </h2>
+  <Image
+  preview={false}
+    style={{ width: "100%", maxWidth: 200, height: "auto" }}
+    src={product.image}
+  />
+</Col>
+
   );
 };
 

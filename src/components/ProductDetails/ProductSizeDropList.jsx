@@ -1,7 +1,7 @@
 import { Select } from "antd";
 import React, { useState } from "react";
 const ProductSizeDropList = () => {
-  const { Option } = Select; 
+  const { Option } = Select;
   const [selectedSize, setSelectedSize] = useState("M");
   const handleSizeChange = (value) => {
     setSelectedSize(value);
@@ -12,7 +12,7 @@ const ProductSizeDropList = () => {
       <Select
         value={selectedSize}
         onChange={handleSizeChange}
-        style={{ width: "100%", marginBottom: 16 , marginTop: 5 }}
+        style={{ width: "60%" , marginTop: "2%" }}
       >
         <Option value="S">S</Option>
         <Option value="M">M</Option>
