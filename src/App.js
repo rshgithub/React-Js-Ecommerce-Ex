@@ -1,21 +1,18 @@
- 
-
 import { BrowserRouter } from "react-router-dom";
-import {  HomePage, ProductDetails } from "./pages";
+import { HomePage, ProductDetails } from "./pages";
 import { Footer, Header, Navbar } from "../src/common";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
+
         <Navbar />
+
+        <HomePage />
+        <Footer />
       </BrowserRouter>
-      <ProductDetails />
-      <Footer />
-
-
-      
     </div>
   );
 }

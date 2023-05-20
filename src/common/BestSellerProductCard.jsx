@@ -10,9 +10,9 @@ import {
   Divider,
   Image,
 } from "antd";
-
+import { Link } from "react-router-dom";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import React, { useState } from "react";  
 import "../App.css";
 
 const BestSellerProductCard = ({ index, obj }) => {
@@ -27,19 +27,7 @@ const BestSellerProductCard = ({ index, obj }) => {
   const handleCardMouseLeave = () => {
     setHoveredCardIndex(null);
   };
-
-  const overlayStyle = {
-    position: "absolute",
-    top: "58%",
-    left: "50%",
-    width: "50%",
-    height: "50%",
-    padding: "25% ",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.742)",
-    zIndex: "1",
-  };
+ 
 
   return (
     <Card
@@ -73,11 +61,7 @@ const BestSellerProductCard = ({ index, obj }) => {
               />
               <div
                 className="card-image-overlay"
-                style={{
-                  ...overlayStyle,
-
-                  opacity: hoveredCardIndex === index ? 1 : 0,
-                }}
+ 
               >
                 <div style={{ textAlign: "center" }}>
                   <Space size="middle">
@@ -100,7 +84,7 @@ const BestSellerProductCard = ({ index, obj }) => {
                       shape="circle"
                       icon={<ShoppingCartOutlined />}
                       style={{
-                        marginTop: "50%", 
+                        marginTop: "50%",
                         backgroundColor: "#ccc",
                       }}
                     ></Button>
@@ -124,11 +108,7 @@ const BestSellerProductCard = ({ index, obj }) => {
               />{" "}
               <div
                 className="card-image-overlay"
-                style={{
-                  ...overlayStyle,
-
-                  opacity: hoveredCardIndex === index ? 1 : 0,
-                }}
+ 
               >
                 <Row style={{ justifyContent: "center", alignItems: "center" }}>
                   {" "}
@@ -168,30 +148,32 @@ const BestSellerProductCard = ({ index, obj }) => {
           textAlign: "center",
         }}
         description={
-          <Col>
-            <Divider />
-            <Title level={3}>{obj.title}</Title>
-            <Rate
-              className="responsive-rate"
-              allowClear={false}
-              allowHalf
-              disabled
-              value={obj.rating}
-              style={{ marginTop: 10, marginBottom: 10 }}
-            />
-            <Typography.Paragraph style={{ fontSize: "18px" }}>
-              <Space size="middle">
-                <Typography.Text type="danger" style={{ fontSize: "120%" }}>
-                  {"$ "}
-                  {obj.lastPrice}
-                </Typography.Text>
-                <Typography.Text delete disabled style={{ fontSize: "120%" }}>
-                  {"$ "}
-                  {obj.originalPrice}
-                </Typography.Text>
-              </Space>
-            </Typography.Paragraph>
-          </Col>
+          <Link to={`/ProductDetails/${obj.Key}`}>
+            <Col>
+              <Divider />
+              <Title level={3}>{obj.title}</Title>
+              <Rate
+                className="responsive-rate"
+                allowClear={false}
+                allowHalf
+                disabled
+                value={obj.rating}
+                style={{ marginTop: 10, marginBottom: 10 }}
+              />
+              <Typography.Paragraph style={{ fontSize: "18px" }}>
+                <Space size="middle">
+                  <Typography.Text type="danger" style={{ fontSize: "120%" }}>
+                    {"$ "}
+                    {obj.lastPrice}
+                  </Typography.Text>
+                  <Typography.Text delete disabled style={{ fontSize: "120%" }}>
+                    {"$ "}
+                    {obj.originalPrice}
+                  </Typography.Text>
+                </Space>
+              </Typography.Paragraph>
+            </Col>
+          </Link>
         }
       ></Card.Meta>
     </Card>

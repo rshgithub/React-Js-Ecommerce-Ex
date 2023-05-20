@@ -5,9 +5,9 @@ import "../../App.css";
 import BestSellerProductsList from "../../utils/ProductsLists/BestSellerProductsList";
 
 const BestSellerSection = () => {
-  const carouselCards = BestSellerProductsList.map((item, index) => (
-    <div key={index}>
-      <BestSellerProductCard key={index} index={index} obj={item} />
+  const carouselCards = BestSellerProductsList.map((item, key) => (
+    <div key={key}>
+      <BestSellerProductCard key={key} index={key} obj={item} />
     </div>
   ));
 

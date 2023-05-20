@@ -13,10 +13,8 @@ import { BrowserRouter } from "react-router-dom";
 const HomePage = () => {
   return (
     <div style={{ textAlign: "center" }}>
-      <BrowserRouter>
-        <BestSellerSection />
-      </BrowserRouter>
-      <AdsSection />
+         <BestSellerSection />
+       <AdsSection />
       <AdvantageCard />
       <LatestNewsCard />
       <FeaturedProductCard />
