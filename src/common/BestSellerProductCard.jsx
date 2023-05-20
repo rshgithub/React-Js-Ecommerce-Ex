@@ -11,22 +11,11 @@ import {
   Image,
 } from "antd";
 import { Link } from "react-router-dom";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
-import React, { useState } from "react";  
+import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"; 
 import "../App.css";
 
 const BestSellerProductCard = ({ index, obj }) => {
   const { Title } = Typography;
-
-  const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
-
-  const handleCardMouseEnter = (index) => {
-    setHoveredCardIndex(index);
-  };
-
-  const handleCardMouseLeave = () => {
-    setHoveredCardIndex(null);
-  };
  
 
   return (
@@ -49,9 +38,7 @@ const BestSellerProductCard = ({ index, obj }) => {
             }}
           >
             <div
-              className="card-image"
-              onMouseEnter={() => handleCardMouseEnter(index)}
-              onMouseLeave={() => handleCardMouseLeave()}
+              className="card-image" 
             >
               <Image
                 style={{ height: 250, width: "100%", objectFit: "cover" }}
@@ -96,9 +83,7 @@ const BestSellerProductCard = ({ index, obj }) => {
         ) : (
           <Badge.Ribbon placement="start" color="transparent">
             <div
-              className="card-image"
-              onMouseEnter={() => handleCardMouseEnter(index)}
-              onMouseLeave={() => handleCardMouseLeave()}
+              className="card-image" 
             >
               <Image
                 style={{ height: 250, width: "100%", objectFit: "cover" }}

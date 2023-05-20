@@ -10,9 +10,9 @@ const RelatedProductsSections = () => {
           RELATED PRODUCTS
         </Typography.Title>
         <Row gutter={[16, 16]}>
-          {RelatedProductsList.map((product, key) => (
-            <Col key={key}>
-              <BestSellerProductCard index={key} obj={product} />
+          {RelatedProductsList.map((product, index) => (
+            <Col key={product.id}>
+              <BestSellerProductCard index={index} obj={product} />
             </Col>
           ))}
         </Row>
