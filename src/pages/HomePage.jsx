@@ -2,26 +2,25 @@ import React from "react";
 import "../App.css";
 import {
   AdvantageCard,
-  BestSellerSection, 
-  FeaturedProductCard, 
+  BestSellerSection,
+  FeaturedProductCard,
   SearchBar,
-  LatestNewsCard, 
+  LatestNewsCard,
+  ImageSlider,
 } from "../components/HomePage";
-import {  AdsSection } from "../common"; 
-import { BrowserRouter } from "react-router-dom";
+import { AdsSection } from "../common";
 
 const HomePage = () => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <BrowserRouter>
-        <BestSellerSection />
-      </BrowserRouter>
+    <>
+      <ImageSlider />
+      <BestSellerSection />
       <AdsSection />
       <AdvantageCard />
       <LatestNewsCard />
       <FeaturedProductCard />
-      <SearchBar /> 
-    </div>
+      <SearchBar />
+    </>
   );
 };
 

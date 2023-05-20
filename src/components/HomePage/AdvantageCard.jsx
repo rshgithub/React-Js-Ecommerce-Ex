@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon , List, Card, Col } from "antd";
+import { List, Card, Col } from "antd";
  import AdvantagesList from "../../utils/ProductsLists/AdvantagesList"
 
 const AdvantageCard = () => {

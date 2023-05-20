@@ -1,42 +1,88 @@
 import React from "react";
-import { Carousel} from 'antd';
-import Sdata from '../../Sdata'
+import Iphone from "../../assets/MaskGroup1.png";
+import Banner from "../../assets/Banners.png";
+import "../../App.css";
+import { Image } from "antd";
 
 const ImageSlider = () => {
-    const settings = {
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      appendDots: (dots) => {
-        return <ul style={{ margin: 0 }}>{dots}</ul>
-      },
-    }
-
   return (
-
     <>
-    <Carousel {...settings}>
-      {Sdata.map((value, index) => {
-        return (
-          <>
-            <div className='box d_flex top' key={index}>
-              <div className='left'>
-                <h1>{value.title}</h1>
-                <p>{value.desc}</p>
-                <a className='btn-primary'>MORE</a>
-              </div>
-              <div className='right'>
-                <img src={value.cover} alt='' />
+      <div className="carousel">
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner">
+            <div className="item active">
+              <img src={Iphone}/>
+              <div className="carousel-caption">
+                <h1>iPhone X</h1>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy.
+                </p>
+                <a href="#">MORE</a>
               </div>
             </div>
-          </>
-        )
-      })}
-    </Carousel>
-  </>
+
+            <div className="item">
+              <img src={Iphone}/>
+              <div className="carousel-caption">
+                <h1>iPhone X</h1>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy.
+                </p>
+                <a
+                  href="#"
+            
+                >
+                  MORE
+                </a>
+              </div>
+            </div>
+
+            <div className="item">
+              <img src={Iphone}/>
+              <div className="carousel-caption">
+                <h1>iPhone X</h1>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy.
+                </p>
+                <a
+                  href="#"
+          
+                >
+                  MORE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a
+            className="left carousel-control"
+            href="#myCarousel"
+            data-slide="prev"
+          >
+            <span className="glyphicon glyphicon-chevron-left"></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a
+            className="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span className="glyphicon glyphicon-chevron-right"></span>
+            <span className="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div className="slider">
+        <Image src={Banner} preview={false} />
+      </div>
+    </>
   );
-        }
-        
- export default ImageSlider;
+};
+
+export default ImageSlider;
