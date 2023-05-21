@@ -10,11 +10,16 @@ import {
 
 const ProductDetailsSection = (props) => {
   const { product } = props;
+  const { Title, Text } = Typography;
 
   return (
-    <Col >
+    <Col
+      style={{
+        width: "100%",
+      }}
+    >
       <Col>
-        <h2 style={{ fontSize: "2rem" }}>{product.name}</h2>
+        <Title level={2}>{product.name}</Title>
         <Row>
           <Space
             size="large"
@@ -26,22 +31,19 @@ const ProductDetailsSection = (props) => {
             }}
           >
             <Rate
-              style={{ fontSize: "1rem" }}
+              style={{ fontSize: "2rem" }}
               allowClear={false}
               allowHalf
               disabled
               value={product.rating}
             />
-            <p
-              style={{
-                color: "lightGrey",
-                fontSize: "1rem",
-                fontWeight: "normal",
-              }}
+            <Text
+              type="secondary"
+              style={{ fontSize: "2rem", fontWeight: "normal" }}
             >
               0 Reviews
-            </p>
-            <Button type="link" style={{ fontSize: "1rem" }}>
+            </Text>
+            <Button type="link" style={{ fontSize: "2rem" }}>
               Submit a review
             </Button>
           </Space>
@@ -52,23 +54,23 @@ const ProductDetailsSection = (props) => {
 
       <Typography.Paragraph style={{ textAlign: "left", fontSize: "1.2rem" }}>
         <Space size="middle">
-          <Typography.Text type="danger" style={{ fontSize: "2rem" }}>
+          <Typography.Text type="danger" style={{ fontSize: "4rem" }}>
             {"$ "}
             {product.lastPrice}
           </Typography.Text>
           <Typography.Text
             delete
             disabled
-            style={{ fontSize: "2rem", marginLeft: "1rem" }}
+            style={{ fontSize: "4rem", marginLeft: "1rem" }}
           >
             {"$ "}
             {product.originalPrice}
           </Typography.Text>
         </Space>
       </Typography.Paragraph>
-      <Row style={{ fontSize: "1rem", height: 35 }}>
+      <Row style={{ fontSize: "1rem" }}>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
-          <h3>Availability:</h3>
+          <Title level={5}>Availability:</Title>
         </Col>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
           <h4>
@@ -80,17 +82,17 @@ const ProductDetailsSection = (props) => {
           </h4>
         </Col>
       </Row>
-      <Row style={{ fontSize: "1rem", height: 35 }}>
+      <Row style={{ fontSize: "1rem" }}>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
-          <h3>Category:</h3>
+          <Title level={5}>Category:</Title>
         </Col>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
           <Typography.Title level={5}>{product.category}</Typography.Title>
         </Col>
       </Row>
-      <Row style={{ fontSize: "1rem", height: 35 }}>
+      <Row style={{ fontSize: "1rem" }}>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
-          <h3>Free shipping:</h3>
+          <Title level={5}>Free shipping:</Title>
         </Col>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
           <h4>
@@ -105,17 +107,17 @@ const ProductDetailsSection = (props) => {
 
       <Divider />
 
-      <Row style={{ fontSize: "1rem", height: 30 }}>
+      <Row style={{ fontSize: "1rem" }}>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
-          <h3> Select Color:</h3>
+          <Title level={5}>Select Color:</Title>
         </Col>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
           <SelectProductColorOptios />{" "}
         </Col>
       </Row>
-      <Row style={{ fontSize: "1rem", height: 40, marginTop:  "3%" }}>
+      <Row style={{ fontSize: "1rem", height: 40, marginTop: "3%" }}>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
-          <h3>Size:</h3>
+          <Title level={5}>Size:</Title>
         </Col>
         <Col xs={12} sm={6} lg={11} style={{ textAlign: "left" }}>
           <ProductSizeDropList />

@@ -1,14 +1,14 @@
 import React from "react";
 import { Rate, Card, Row, Avatar, Col } from "antd";
 import { UserOutlined } from "@ant-design/icons";
-import ProductReviewsList from "../../utils/ProductsLists/ProductReviewsList";
+import ProductReviewsListData from "../../utils/ProductsLists/ProductReviewsListData";
 
 const ProductReviewsCard = () => {
   const { Meta } = Card;
 
   return (
     <div style={{ height: "60vh" }}>
-      {ProductReviewsList.map((review) => (
+      {ProductReviewsListData.map((review) => (
         <Card
           key={review.id}
           style={{

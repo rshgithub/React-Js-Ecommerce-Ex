@@ -1,4 +1,4 @@
-const LatestNewsList = [
+const LatestNewsListData = [
   {
     key: 1,
     title: "Typesetting industry",
@@ -25,4 +25,4 @@ const LatestNewsList = [
   },
 ];
 
-  export default LatestNewsList
+  export default LatestNewsListData

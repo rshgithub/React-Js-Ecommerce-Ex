@@ -1,18 +1,21 @@
-import { BrowserRouter } from "react-router-dom";
-import { HomePage, ProductDetails } from "./pages";
+import "./App.css";
+import { HomePage, ProductDetails, ProductGrid, ProductsList } from "./pages";
 import { Footer, Header, Navbar } from "../src/common";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
+    <div className="App" >
+      <Header />
+      <Navbar />
+      <Routes>
+        <Route index element={<HomePage />} />
 
-        <Navbar />
-
-        <HomePage />
-        <Footer />
-      </BrowserRouter>
+        <Route exact path="/productgrid" element={<ProductGrid />} />
+        <Route exact path="/productlist" element={<ProductsList />} />
+        <Route exact path="/productdetails" element={<ProductDetails />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

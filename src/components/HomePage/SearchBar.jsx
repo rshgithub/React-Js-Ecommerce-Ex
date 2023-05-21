@@ -1,19 +1,26 @@
-import React from 'react'
-import { Input } from 'antd';
+import React from "react";
+import { Input, Row } from "antd";
 
 const { Search } = Input;
 
 const SearchBar = () => {
   return (
-<div style={{ display: "flex", justifyContent: "center" }}>
-  <Search
-    style={{ width: "90%", maxWidth: 600, margin: "40px 0" }}
-    placeholder="input search text"
-    enterButton="Search"
-    size="large"
-  />
-</div>
-  )
-}
+    <Row
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: "5%",
+        marginTop: "5%",
+      }}
+    >
+      <Search
+        style={{ width: "30%" }}
+        placeholder="input search text"
+        enterButton="Search"
+        size="large"
+      />
+    </Row>
+  );
+};
 
-export default SearchBar
+export default SearchBar;

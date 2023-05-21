@@ -1,25 +1,27 @@
 import React from "react";
 import "../App.css";
-import {
-  AdvantageCard,
+import { 
   BestSellerSection, 
-  FeaturedProductCard, 
-  SearchBar,
-  LatestNewsCard, 
+  SearchBar, 
+  ImageSlider,
 } from "../components/HomePage";
-import {  AdsSection } from "../common"; 
-import { BrowserRouter } from "react-router-dom";
+import { AdsSection } from "../common";
+import  LatestNewsList  from "../components/HomePage/Lists/LatestNewsList";
+import  AdvantagesList  from "../components/HomePage/Lists/AdvantagesList";
+import  FeaturedProductsList  from "../components/HomePage/Lists/FeaturedProductsList"; 
+ 
 
 const HomePage = () => {
   return (
-    <div style={{ textAlign: "center" }}>
-         <BestSellerSection />
-       <AdsSection />
-      <AdvantageCard />
-      <LatestNewsCard />
-      <FeaturedProductCard />
-      <SearchBar /> 
-    </div>
+    <>
+      <ImageSlider />
+      <BestSellerSection />
+      <AdsSection />
+      <AdvantagesList />
+      <LatestNewsList/> 
+      <FeaturedProductsList /> 
+      <SearchBar />
+    </>
   );
 };
 

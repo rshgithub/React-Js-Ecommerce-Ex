@@ -1,6 +1,4 @@
 import { Typography, Input, Checkbox, Image, Space, Button, Card } from "antd";
-import { MailOutlined } from "@ant-design/icons";
-
 const NewsletterCard = () => {
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -8,13 +6,14 @@ const NewsletterCard = () => {
   };
   const { Title, Text } = Typography;
   return (
-    <div >
+    <div>
       <Card style={{ width: 800 }}>
         <Space size="middle">
-          <div >
+          <div>
             <Title level={4}>Newsletter</Title>
             <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
             </Text>
             <div
               style={{
@@ -26,7 +25,7 @@ const NewsletterCard = () => {
               <Space.Compact style={{ width: "100%" }}>
                 <Input placeholder="Email address" />
                 <Button type="primary" onClick={handleSubscribe}>
-                Subscribe
+                  Subscribe
                 </Button>
               </Space.Compact>
             </div>
@@ -35,14 +34,15 @@ const NewsletterCard = () => {
             >
               <Checkbox />
               <Text style={{ marginLeft: 10 }}>
-              Don’t show this popup again              </Text>
+                Don’t show this popup again
+              </Text>
             </div>
           </div>
 
           <Image
-           style={{   objectFit: "cover" }}
-           preview={false}
-          height={300}
+            style={{ objectFit: "cover" }}
+            preview={false}
+            height={300}
             width={300}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Ivf6EtmQAa_Aa7qfpPyy8jPZeW07Egx7VXshTwDGQKmZQvx7H3iGXbFsEfCd9XSFR68&usqp=CAU"
           />

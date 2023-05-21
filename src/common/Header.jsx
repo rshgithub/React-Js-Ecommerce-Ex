@@ -6,8 +6,8 @@ import {
   ShoppingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Button, Col, Divider, Dropdown, Row, Space } from "antd";
-import { Container } from "reactstrap";
+import { Breadcrumb, Button, Divider, Dropdown, Space } from "antd";
+import { Col, Row } from "reactstrap";
 import BreadcrumbSeparator from "antd/es/breadcrumb/BreadcrumbSeparator";
 const items = [
   {
@@ -21,16 +21,9 @@ const items = [
 ];
 
 const AppHeader = () => (
-  <Container>
-    <Row
-      style={{
-        display: "flex",
-        //justifyContent: 'left',
-        paddingTop: "10px",
-      }}
-      justify={"start"}
-    >
-      <Col xs={24} sm={6} md={6} lg={6} xl={6}>
+  <>
+    <Row className="header">
+      <Col xs={24} xl={12} className="header-dropdown">
         <Space>
           <Dropdown menu={{ items }}>
             <Space>
@@ -44,17 +37,7 @@ const AppHeader = () => (
           </Dropdown>
         </Space>
       </Col>
-      <Col
-        xs={24}
-        sm={6}
-        md={8}
-        lg={6}
-        xl={16}
-        style={{
-          display: "flex",
-          justifyContent: "right",
-        }}
-      >
+      <Col xs={24} xl={12} className="header-content">
         <Breadcrumb>
           <BreadcrumbSeparator>
             <a style={{ color: "black" }}>
@@ -77,8 +60,8 @@ const AppHeader = () => (
         </Breadcrumb>
       </Col>
     </Row>
-    <Divider orientation="left"></Divider>
-  </Container>
+    <Divider></Divider>
+  </>
 );
 
 export default AppHeader;

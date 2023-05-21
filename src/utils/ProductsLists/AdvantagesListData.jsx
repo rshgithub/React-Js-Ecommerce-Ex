@@ -1,6 +1,6 @@
 import { DollarCircleOutlined , PhoneOutlined , ShoppingCartOutlined } from "@ant-design/icons";
 
-const AdvantagesList = [
+const AdvantagesListData = [
 {
     key: 1,
     title: "FREE SHIPPING",
@@ -33,4 +33,4 @@ const AdvantagesList = [
   },
 ];
 
-export default AdvantagesList
+export default AdvantagesListData

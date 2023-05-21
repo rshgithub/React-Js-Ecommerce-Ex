@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const HeaderBannerImages = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default HeaderBannerImages
+export default HeaderBannerImages;

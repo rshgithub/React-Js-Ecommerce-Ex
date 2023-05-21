@@ -1,4 +1,4 @@
-const ProductReviewsCard = [
+const ProductReviewsListData = [
       {
         id: 1,
         avatar: "https://example.com/avatar.jpg",
@@ -41,4 +41,4 @@ const ProductReviewsCard = [
       },
     ];
 
-    export default ProductReviewsCard
+    export default ProductReviewsListData

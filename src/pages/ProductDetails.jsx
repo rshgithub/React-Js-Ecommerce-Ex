@@ -3,7 +3,7 @@ import { Row, Col } from "antd";
 import { CategoryNavbar } from "../common";
 import "../App.css";
 import { useParams } from "react-router-dom";
-import BestSellerProductsList from "../../src/utils/ProductsLists/BestSellerProductsList";
+import BestSellerProductsListData from "../../src/utils/ProductsLists/BestSellerProductsListData";
 
 import {
   BestSellerSection,
@@ -38,18 +38,19 @@ const ProductDetails = () => {
     return products.find((product) => product.key === key);
   };
 
-  const foundProduct = findProductByKey(BestSellerProductsList, keyToFind);
+  const foundProduct = findProductByKey(BestSellerProductsListData, keyToFind);
 
   console.log({ foundProduct });
 
   return (
-    <Col
-      style={{
-        padding: "5%",
-      }}
-    >
+    <Col>
       <CategoryNavbar />
-      <Row>
+      <Row
+        style={{
+          paddingLeft: "5%",
+          paddingRight: "5%",
+        }}
+      >
         <Col xs={24} lg={18}>
           <Row gutter={[16, 16]}>
             <Col>

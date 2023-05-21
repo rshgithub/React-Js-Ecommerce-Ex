@@ -11,12 +11,11 @@ import {
   Image,
 } from "antd";
 import { Link } from "react-router-dom";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"; 
+import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import "../App.css";
 
-const BestSellerProductCard = ({ index, obj }) => {
+const BestSellerProductCard = ({ obj }) => {
   const { Title } = Typography;
- 
 
   return (
     <Card
@@ -37,19 +36,14 @@ const BestSellerProductCard = ({ index, obj }) => {
               left: "-10px",
             }}
           >
-            <div
-              className="card-image" 
-            >
+            <div className="card-image">
               <Image
                 style={{ height: 250, width: "100%", objectFit: "cover" }}
                 alt="example"
                 preview={false}
                 src={obj.image}
               />
-              <div
-                className="card-image-overlay"
- 
-              >
+              <div className="card-image-overlay">
                 <div style={{ textAlign: "center" }}>
                   <Space size="middle">
                     <Button
@@ -82,21 +76,15 @@ const BestSellerProductCard = ({ index, obj }) => {
           </Badge.Ribbon>
         ) : (
           <Badge.Ribbon placement="start" color="transparent">
-            <div
-              className="card-image" 
-            >
+            <div className="card-image">
               <Image
                 style={{ height: 250, width: "100%", objectFit: "cover" }}
                 alt="example"
                 preview={false}
                 src={obj.image}
               />{" "}
-              <div
-                className="card-image-overlay"
- 
-              >
+              <div className="card-image-overlay">
                 <Row style={{ justifyContent: "center", alignItems: "center" }}>
-                  {" "}
                   <Space size="middle">
                     <Button
                       ghost

@@ -1,4 +1,4 @@
-const BestSellerProductsList = [
+const BestSellerProductsListData = [
   {
     key: 1,
     title: "Title 1",
@@ -73,4 +73,4 @@ const BestSellerProductsList = [
   },
 ];
 
-  export default BestSellerProductsList
+  export default BestSellerProductsListData

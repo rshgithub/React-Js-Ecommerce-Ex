@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="footer">
       <Divider orientation="left"></Divider>
       <Row className="footer-content">
-        <Col xs={24} xl={6}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={6}>
           <div className="super-title">BOUNCER</div>
           <div className="super-text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -21,18 +21,28 @@ const Footer = () => {
             ever. Since the 1500s, when an unknown printer.
           </div>
         </Col>
-        <Col xs={24} xl={6}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={6}>
           <div className="title">Follow Us</div>
           <div className="super-text">
             Since the 1500s, when an unknown printer took a galley of type and
             scrambled.
           </div>
           <Space>
-            <IconFont type="icon-facebook" style={{ color: "#385C8E" }} />
-            <IconFont type="icon-twitter" style={{ color: "#03A9F4" }} />
+            <IconFont
+              type="icon-facebook"
+              style={{ color: "#385C8E", marginTop: "30px" }}
+            />
+            <IconFont
+              type="icon-twitter"
+              style={{
+                color: "#03A9F4",
+                paddingLeft: "50px",
+                marginTop: "30px",
+              }}
+            />
           </Space>
         </Col>
-        <Col xs={24} xl={6}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={6}>
           <div className="title">Contact Us</div>
           <div className="c-item">
             <div className="text-item">
@@ -50,49 +60,49 @@ const Footer = () => {
           </div>
         </Col>
         <Divider orientation="left"></Divider>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">Information</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">Service</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">Useful Links</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">Extras</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">My Account</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">Userful Links</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
           <span className="text-item">Privacy Policy</span>
           <span className="text-item">Terms & Conditions</span>
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} sm={16} md={6} lg={8} xl={3}>
           <div className="title">Our Offers</div>
           <span className="text-item">About Us</span>
           <span className="text-item">Information</span>
@@ -102,12 +112,28 @@ const Footer = () => {
       </Row>
       <Divider orientation="left"></Divider>
       <Row className="bottom-bar">
-        <Col Col xs={24} xl={6} className="bottom-bar-content">
+        <Col
+          Col
+          xs={24}
+          sm={16}
+          md={6}
+          lg={8}
+          xl={6}
+          className="bottom-bar-content"
+        >
           <span className="text">
             © 2018 Ecommerce theme by www.bisenbaev.com
           </span>
-          </Col>
-          <Col Col xs={24} xl={6} className="bottom-bar-content">
+        </Col>
+        <Col
+          Col
+          xs={24}
+          sm={16}
+          md={6}
+          lg={8}
+          xl={6}
+          className="bottom-bar-content"
+        >
           <Image preview={false} src={Payment} />
         </Col>
       </Row>

@@ -1,4 +1,4 @@
-const FeaturedProductsList = [
+const FeaturedProductsListData = [
   {
     key: 1,
     title: "Beats Solo 2 On Ear Headphones",
@@ -30,4 +30,4 @@ const FeaturedProductsList = [
   },
 ];
 
-  export default FeaturedProductsList
+  export default FeaturedProductsListData
